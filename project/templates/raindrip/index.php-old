@@ -1,0 +1,394 @@
+<?php
+
+defined('_JEXEC') or die('Restricted access');
+
+if (isset($_GET['id']) && $_GET['id'] == 92 ) {
+
+        header("HTTP/1.0 404 Not Found");
+}
+?>
+<!DOCTYPE html>
+<html xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" >
+    <head>
+        <!-- ENABLE HTML5 in IE<8-->
+        <script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
+
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <?php
+        $search = array('jquery.min.js', 'jquery-noconflict.js', 'jquery-migrate.min.js', 'mootools-core.js', 'core.js', 'mootools-more.js', 'modal.js', 'tabs-state.js', 'caption.js', 'bootstrap.min.js', 'j2store.namespace.js', 'j2storejqui.js', 'j2store.js', 'jquery-ui.min.js');
+        // remove the unnecessary js files
+        foreach ($this->_scripts as $key => $script) {
+            foreach ($search as $findme) {
+
+                if (stristr($key, $findme) !== false) {
+                    unset($this->_scripts[$key]);
+                }
+            }
+        }
+        ?>
+    <jdoc:include type="head" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/main.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/joomla.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/messi.css" type="text/css" />
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" type="text/css" />
+    <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
+
+
+    <!--[if IE 7]>
+<link rel="stylesheet" type="text/css"
+href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie7.css">
+<![endif]-->
+
+
+
+    <script type="text/javascript"> var cartId=<?php echo json_encode(session_id()); ?>;</script>
+    <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/messi.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/scripts.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js" type="text/javascript"></script>
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/fancybox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/fancybox/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+
+    <!--BEGIN - SHOPATRON SCRIPTS -->
+    <script id="shopatronCart" src="http://mediacdn.shopatron.com/media/js/product/shopatronAPI-2.4.min.js" type="text/javascript">{"apiKey":"g8rpsyr2"}</script>
+    <script src="http://mediacdn.shopatron.com/media/js/product/shopatronJST-2.4.min.js" type="text/javascript"></script>
+    <!--END - SHOPATRON SCRIPTS -->
+
+    <script type="text/javascript" src="//use.typekit.net/xrg0yif.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+
+    <script type="text/javascript">
+
+
+
+        var _gaq = _gaq || [];
+
+        _gaq.push(['_setAccount', 'UA-16321891-2']);
+
+        _gaq.push(['_setDomainName', '.raindrip.com']);
+
+        _gaq.push(['_setAllowHash', false]);
+
+        _gaq.push(['_setAllowLinker', true]);
+
+        _gaq.push(['_trackPageview']);
+
+
+
+        (function() {
+
+            var ga = document.createElement('script');
+
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+            ga.setAttribute('async', 'true');
+
+            document.documentElement.firstChild.appendChild(ga);
+
+        })();
+
+
+
+    </script>
+
+
+
+</head>
+<body>
+
+    <header class="clear">
+        <div id="main-top">
+            <a href="/"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/raindrip-logo.png" alt="Raindrip" /></a>
+            <!--<img id="slogan-img" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/slogan.jpg" alt="Raindrip" />-->
+            <div id="secondary-links">
+
+                <span id="position-7"><jdoc:include type="modules" name="position-7" /></span> <a href="/cart" class="cart-link"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/cart-logo.png" alt="cart" /> &nbsp;Cart (<span id="cartQQ">0</span>)</a>
+            </div>
+        </div>
+        <nav>
+            <div id="position-9"><jdoc:include type="modules" name="position-9" /></div>
+            <!-- BEGIN - include joomla search box overrided template -->
+            <jdoc:include type="modules" name="position-0" />
+            <!-- END - include joomla search box overrided template -->
+        </nav>
+
+    </header>
+
+    <?php
+    if ($_SERVER['REQUEST_URI'] == '/drip-kits') {
+
+        // SHOW KITS
+        ?>
+        <div class="kits-bkg">
+            <section class="clear">
+
+                <article class="full-width clear" >
+
+                    <div class="clear full-kits kits-ctc">
+                        <div class="left ">
+                            <h1 class="kits-title">
+                                Raindrip Automatic Drip<br/>Watering System
+                            </h1>
+                            <div class="kits-desc">
+                                <img src="/templates/raindrip/images/kits-clock.png" alt="Raindrip" />
+                                <p>
+                                    Everything you need to install a drip <br/>system in less than 20 minutes.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="left image-container">
+                            <img src="/templates/raindrip/images/kits-bkg-top.jpg" alt="Raindrip Kits" />
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+        </div>
+
+        <div class="kits-page-container clear">
+            <div class="left kits-column">
+
+                <?php
+                // BEGIN LOAD KITS CATEGORY
+                $db = JFactory::getDbo();
+                $id = 82; // KITS CATEGORY (ID = 82)
+                $query = $db->getQuery(true);
+                $query->select('*');
+                $query->from('#__content');
+                $query->where('catid="' . $id . '" AND state="1"');
+                $db->setQuery((string) $query);
+                $res = $db->loadObjectList();
+                $procuctsCount = count($res);
+
+                if ($procuctsCount > 0) {
+
+                    foreach ($res as $r) {
+
+                        // ONLY FOR KITS
+                        if ($r->id == '91' || $r->id == '90' || $r->id == '88' || $r->id == '89') {
+
+                            // GET MAIN IMAGE FROM STDCLASS OBJECT
+                            $JSONimages = json_decode($r->images);
+                            $imageURL = $JSONimages->image_fulltext;
+                            if ($imageURL == '' or is_null($imageURL)) {
+                                $imageURL = $JSONimages->image_intro;
+                            }
+
+                            if ($imageURL == '' or is_null($imageURL)) {
+                                $imageURL = 'images/empty-raindrip.jpg';
+                            }
+
+                            // GET OBJECT PARAMS FROM JREGISTRY OBJECT CLASS
+                            $productParams = json_decode($r->attribs);
+
+                            // CHECK IF ITEM HAS SPECIAL PRICE
+                            $product_price = $productParams->special_price;
+
+                            if ($product_price == '' || is_null($product_price) || $product_price == 0) {
+                                $product_price = $productParams->item_price;
+                            }
+
+                            $shopaProdID = $productParams->item_cart_text;
+                            if ($shopaProdID == '' || is_null($shopaProdID)) {
+                                $shopaProdID = 0;
+                            }
+
+                            // GET KIT LINK
+                            $link = JRoute::_(ContentHelperRoute::getArticleRoute($r->id, $id));
+
+                            $separated_intro = explode('<div class="facts">FACTS</div>', $r->introtext);
+
+                            $showDescription = '';
+                            if (count($separated_intro) > 0) {
+                                $showDescription = $separated_intro[0];
+                            }
+
+                            // ONLY ALIGN "CERTAIN ITEMS EXACTLY AS PSD" AS REQUESTED
+                            if ($shopaProdID == 'R560DP') {
+                                $extraClass = '';
+                            } else {
+                                $extraClass = 'class="position-kit-img"';
+                            }
+
+                            // SHOW KITS
+                            echo '<div class="outer-kit">
+                                <div class="half-top">
+                                    <div class="container">
+                                        <a href="' . $link . '"><img ' . $extraClass . '  src="/' . $imageURL . '" alt="' . $r->title . '"  /></a>
+                                        <h2 class="title">
+                                            ' . $r->title . '
+                                        </h2>
+                                        <p class="description">
+                                            ' . strip_tags($showDescription) . '
+                                        </p>
+                                        <div class="links">
+                                            <a class="more-info" href="' . $link . '">MORE INFORMATION &gt;</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="half-bottom">
+                                    <div class="container">
+                                        <span class="price"> $' . round($product_price, 2) . ' </span> <a data-productLink="' . $link . '"  class="shopatron-add-to-cart seebtn" href="#" data-shopatronprodid="' . $shopaProdID . '">ADD TO CART</a>
+                                    </div>
+                                </div>
+
+                            </div>';
+                        }
+                    }
+                }
+                ?>
+            </div>
+
+            <div class="right-kit-detail">
+                <div class="in-the-kit">
+                    <h3 class="title">In the Kit:</h3>
+                    <img src="/templates/raindrip/images/kits-image-main.png" alt="In the kit" />
+                    <br/><br/>
+                    <h3 class="title">Features:</h3>
+
+                    <ul class="compatibility-facts left-facts">
+                        <li class="fact ">
+                            <a> &nbsp; Clearly marked bags for each installation step</a>
+                        </li>
+                        <li class="fact">
+                            <a> &nbsp; Design and Inspiration Guide</a>
+                        </li>
+                        <li class="fact ">
+                            <a> &nbsp; Online Video Help</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <?php
+    } else {
+        // SHOW PRODUCTS AND CATEGORIES CONTENT
+        if ($_SERVER['REQUEST_URI'] == '/') {
+            ?>
+            <div class="home-bkg">
+                <div class="home-bkg-left"></div>
+            <?php } ?>
+            <section class="clear">
+                <?php if ($_GET['id'] != '92') { ?>
+                    <div id="position-4"><jdoc:include type="modules" name="position-4" /></div>
+                <?php } ?>
+                <!--<jdoc:include type="modules" name="top" />-->
+                <article <?php
+            if ($_SERVER['REQUEST_URI'] == '/') {
+                echo ' class="left-article"';
+            }
+                ?>  >
+                    <jdoc:include type="component" />
+                    <!--<jdoc:include type="modules" name="bottom" />-->
+
+                    <!-- BEGIN - INCLUDE RELATED PRODUCTS MODULE -->
+                    <div id="position-2"><jdoc:include type="modules" name="position-2" /></div>
+                    <!-- END - INCLUDE RELATED PRODUCTS MODULE -->
+
+                </article>
+            </section>
+            <?php
+            if ($_SERVER['REQUEST_URI'] == '/') {
+                ?>
+                <div class="home-bkg-right"></div>
+            </div>
+        <?php } ?>
+
+    <jdoc:include type="modules" name="position-13" />
+
+<?php } ?>
+<footer class="clear">
+    <div id="center-footer">
+        <div class="quad-width">
+            <a href="/"><img id="footer-logo" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/logo-footer.png" alt="raindrip" /></a>
+            <div class="copyright">Copyright 2013</div>
+        </div>
+        <div class="quad-width">
+            <ul class="title-footer-category">
+                <li class="footer-category-title">Products</li>
+            </ul>
+            <!-- JOOMLA INCLUDE MENU -->
+            <div id="position-8"><jdoc:include type="modules" name="position-8" /></div>
+            <!-- JOOMLA INCLUDE MENU -->
+            <br/>
+            <ul class="title-footer-category">
+                <li class="footer-category-title">Kits</li>
+            </ul>
+            <!-- JOOMLA INCLUDE MENU -->
+            <div id="position-6"><jdoc:include type="modules" name="position-6" /></div>
+            <!-- JOOMLA INCLUDE MENU -->
+            <br/>
+            <ul class="title-footer-category">
+                <li class="footer-category-link left-li"><a href="#">Website by</a></li>
+                <li class="footer-category-title left-li">&nbsp; <a href="http://thesmackpack.com/" target="_blank">The Smack Pack</a></li>
+            </ul>
+
+        </div>
+        <div class="quad-width">
+            <ul class="title-footer-category">
+                <li class="footer-category-title">Expand & Repair</li>
+                <li class="footer-category-link"><a href="/expand-and-repair">How much material will I need?</a></li>
+                <!--
+                    <li class="footer-category-link">&nbsp;</li>
+                    <li class="footer-category-title">Benefits/How It Works</li>
+                -->
+            </ul>
+            <!-- JOOMLA INCLUDE MENU -->
+            <!--<div id="position-5"><jdoc:include type="modules" name="position-5" /></div>-->
+            <!-- JOOMLA INCLUDE MENU -->
+            <br/>
+
+            <ul class="title-footer-category">
+                <li class="footer-category-title">Resources</li>
+                <li class="footer-category-link"><a href="/resources#/faq">FAQ</a></li>
+                <li class="footer-category-link"><a href="/resources#/catalogs">Catalog</a></li>
+                <li class="footer-category-link"><a href="/resources#/videos">Videos</a></li>
+                <li class="footer-category-link">&nbsp;</li>
+            </ul>
+
+            <ul class="title-footer-category">
+                <li class="footer-category-title"><a href="/about-us">About Us</a></li>
+                <li class="footer-category-title"><a href="/contact-us">Contact Us</a></li>
+                <li class="footer-category-title"><a href="/rebate-center">Rebate Center</a></li>
+                <li class="footer-category-title"><a href="/where-to-buy">Where to Buy</a></li>
+            </ul>
+
+
+        </div>
+        <div class="quad-width-right">
+            <a target="_blank" href="https://www.youtube.com/user/RaindripInc" class="social-circle youtube"></a> <a target="_blank"  href="http://www.pinterest.com/ndsmarketing/" class="social-circle pinterest"></a> <a target="_blank"  href="https://www.facebook.com/RaindripInc" class="social-circle facebook"></a> <a target="_blank"  href="https://plus.google.com/+Ndspro/about" class="social-circle googleplus"></a>
+        </div>
+    </div>
+
+    <div id="overlay">
+        <img id="spinner-loader" alt="" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/ajax-loader.gif" />
+    </div>
+
+</footer>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+</body>
+</html>

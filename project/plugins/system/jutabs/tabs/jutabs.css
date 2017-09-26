@@ -1,0 +1,499 @@
+.ju-tabs-wrap {
+	padding: 0;
+	margin: 0;
+	/* Do NOT remove box-sizing, we need it to make sure with/height has exactly value even with border/padding */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;	/* Firefox, other Gecko */
+	box-sizing: border-box;		 /* Opera/IE 8+ */
+	width: 100%;
+}
+
+.ju-tabs-wrap div, .ju-tabs-wrap li.jutabs-item h3{
+	behavior: url(plugins/system/jutabs/tabs/PIE.htc);
+	-pie-watch-ancestors: 1;
+}
+
+.ju-tabs-wrap .ju-tabs-container {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid #F5F5F5;
+	margin: 0 !important; /*Because width: 100%, so don't set margin*/
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	/* Do NOT remove box-sizing, we need it to make horizontal accordion work properly */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;	/* Firefox, other Gecko */
+	box-sizing: border-box;		 /* Opera/IE 8+ */
+}
+.ju-tabs-wrap .ju-tabs-title-wrap {
+	position: relative;
+	overflow: hidden;
+	z-index: 99;
+}
+
+.ju-tabs-wrap div.ju-tabs-content {
+	display: none;
+	position: relative;
+	float: left;
+	padding: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.ju-tabs-wrap div.ju-tabs-content:first-child {
+	/* display: block; */
+}
+
+.ju-tabs-wrap.ajaxloading div.ju-tabs-content {
+	opacity: 0.9;
+}
+
+.ju-tabs-wrap div.ju-tabs-subcontent {
+	padding: 10px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title {
+	margin: 0px; /*! important ?!*/
+	padding: 0px;
+	/* Do NOT remove box-sizing, we need it to tabs title full fill even with border/padding */
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;	/* Firefox, other Gecko */
+	box-sizing: border-box;		 /* Opera/IE 8+ */
+}
+
+.ju-tabs-wrap .ju-tabs-title-scroll ul.ju-tabs-title {
+	left: 0;
+}
+
+.ju-tabs-title-top.ju-tabs-title-scroll ul.ju-tabs-title, .ju-tabs-title-bottom.ju-tabs-title-scroll ul.ju-tabs-title {
+	position: absolute;
+}
+
+.ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-prev, .ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-next {
+	cursor: pointer;
+	display: none;
+	height: 100%;
+	position: absolute;
+	width: 20px;
+	z-index: 999;
+}
+
+.ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-prev.disabled, .ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-next.disabled {
+	opacity: 0.5;
+	transition: all 0.4s ease 0s;
+	-webkit-transition: all 0.4s ease 0s;
+}
+
+.ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-prev {
+	background: url('assets/images/left_arrow.png') no-repeat scroll center center transparent;
+	left: 0;
+}
+
+.ju-tabs-wrap .ju-tabs-title-wrap .tabscroll-next {
+	background: url("assets/images/right_arrow.png") no-repeat scroll center center transparent;
+	right: 0;
+}
+
+.ju-tabs-wrap .ju-tabs-panel {
+	background: none repeat scroll 0px 0px #FFFFFF;
+	border: 1px solid #F5F5F5;
+	z-index: 9;
+}
+
+#main .ju-tabs-wrap ul.ju-tabs-title h3 {
+	margin: 0;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title h3 {
+	background: none repeat scroll 0px 0px #FAFAFA;
+	line-height: 35px;
+	margin: 0px;
+	position: relative;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title h3 span {
+	display: block;
+	padding: 5px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title h3 span.ju-tabs-arrow {
+	display: none;
+	position: absolute;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title li {
+}
+
+.ju-tabs-wrap ul.ju-tabs-title li.active {
+	background: none repeat scroll 0px 0px #FFFFFF;
+}
+
+.ju-tabs-wrap ul.ju-tabs-title li.active h3 {
+	z-index: 100;
+}
+
+.ju-tabs-title-top {
+}
+
+.ju-tabs-title-top ul.ju-tabs-title {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 0;
+}
+
+.ju-tabs-title-top ul.ju-tabs-title li {
+	cursor: pointer;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+}
+
+.ju-tabs-panel-top {
+	clear: both;
+	width: 100%;
+	z-index: 1;
+	overflow: hidden;
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+}
+
+.ju-tabs-title-left {
+	float: left;
+}
+
+.ju-tabs-title-left ul.ju-tabs-title {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.ju-tabs-title-left ul.ju-tabs-title li {
+	cursor: pointer;
+	display: block;
+	margin: 5px;
+	padding: 5px;
+}
+
+.ju-tabs-panel-left {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+.ju-tabs-title-right {
+	float: right;
+	height: 100%;
+}
+
+.ju-tabs-title-right ul.ju-tabs-title {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+.ju-tabs-title-right ul.ju-tabs-title li {
+	margin: 0px 0px 0px 1px;
+	padding: 0px;
+	cursor: pointer;
+	display: block;
+}
+
+.ju-tabs-panel-right {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+
+.ju-tabs-title-bottom {
+}
+
+.ju-tabs-title-bottom ul.ju-tabs-title {
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	bottom: 0px;
+}
+
+.ju-tabs-title-bottom ul.ju-tabs-title li {
+	margin: 0px;
+	padding: 0px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.ju-tabs-panel-bottom {
+	position: relative;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+	clear: both;
+}
+
+.ju-tabs-align-left ul.ju-tabs-title {
+	text-align: left;
+}
+
+.ju-tabs-align-center ul.ju-tabs-title {
+	text-align: center;
+}
+
+.ju-tabs-align-right ul.ju-tabs-title {
+	text-align: right;
+}
+
+.ju-tabs-align-justify ul.ju-tabs-title {
+	display: table;
+}
+
+.ju-tabs-align-justify ul.ju-tabs-title li {
+	display: table-cell;
+	float: none;
+	text-align: center;
+}
+
+.ju-tabs-wrap .no-display {
+	display: none;
+}
+
+.ju-tabs-wrap .ajaxloading {
+	width: 16px;
+	height: 16px;
+	right: 3px;
+	display: block !important;
+	position: absolute;
+	margin-top: -8px;
+	background: url("assets/images/loading.gif") no-repeat scroll 0px 0px transparent;
+	top: 50%;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion {
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li.jutabs-item {
+	line-height: normal;
+	margin: 0px;
+	padding: 0px;
+	list-style: none outside none;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li.jutabs-item.first {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li.jutabs-item.last {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li h3.active {
+	background: none repeat scroll 0px 0px #FFFFFF;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li h3.ju-tabs-accordion-title {
+	cursor: pointer;
+	margin: 0px ! important;
+	background: none repeat scroll 0px 0px #FAFAFA;
+	border-bottom: 1px solid #EAEAEA;
+	position: relative;
+	line-height: 35px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li h3.ju-tabs-accordion-title.active {
+	background: none repeat scroll 0px 0px #FFFFFF;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li h3.ju-tabs-accordion-title span {
+	display: block;
+	padding: 0px 10px;
+	text-transform:none;
+	color: #81B539;
+	margin-left: -18px;
+	margin-top: -8px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li h3.ju-tabs-accordion-title span.ju-tabs-accordion-arrow {
+	display: none;
+	position: absolute;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li div.ju-tabs-accordion-content {
+	background: none repeat scroll 0px 0px #FFFFFF;
+	padding: 0px;
+	display: none;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li:first-child div.ju-tabs-accordion-content {
+	/* display: block; */
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion li div.ju-tabs-accordion-subcontent {
+	padding: 10px;
+	display: block;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-vertical {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-vertical li.jutabs-item {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-vertical li h3.ju-tabs-accordion-title {
+	border-bottom: 1px solid #DDDDDD;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-vertical div.ju-tabs-accordion-content {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-horizontal {
+	padding: 0px ! important;
+	margin: 0px ! important;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-horizontal li.jutabs-item {
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-horizontal li h3.ju-tabs-accordion-title {
+	-webkit-backface-visibility: hidden;
+	-webkit-transform: translateX(-100%) rotate(-90deg); 
+	-webkit-transform-origin: right top; 
+	-moz-transform: translateX(-100%) rotate(-90deg);
+	-moz-transform-origin: right top; 
+	-o-transform: translateX(-100%) rotate(-90deg); 
+	-o-transform-origin: right top; 
+	-ms-transform: translateX(-100%) rotate(-90deg);
+	-ms-transform-origin: right top;
+	transform: translateX(-100%) rotate(-90deg); 
+	transform-origin: right top; 
+	/*
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); #IE7
+	-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)"; #IE8
+	*/
+	position: absolute;
+	letter-spacing: 1px;
+	top: 0px;
+	left: 0px;
+	text-align: left;
+	margin: 0px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-horizontal li div.ju-tabs-accordion-content {
+	position: absolute;
+	overflow: hidden;
+	top: 0px;
+	left: 0px;
+}
+
+.ju-tabs-wrap ul.ju-tabs-accordion-horizontal li div.ju-tabs-accordion-content:hover {
+	overflow-y: auto;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels {
+	position: relative;
+	overflow: hidden;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content-wrapper {
+	position: relative;
+	overflow: hidden;
+	margin: 0px 40px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content {
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	position: relative;
+	z-index: 100;
+	width: 100%;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content:first-child {
+	/* display: block; */
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .next_btn, .ju-tabs-wrap .ju-tabs-slide-panels .prev_btn {
+	position: absolute;
+	cursor: pointer;
+	padding: 5px;
+	top: 50%;
+	background: none repeat scroll 0% 0% #F5F5F5;
+	text-align: left;
+	overflow: hidden;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .next_btn {
+	right: 0px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .prev_btn {
+	left: 0px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .next_btn.disabled {
+	cursor: default;
+	display: none;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .prev_btn.disabled {
+	cursor: default;
+	display: none;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content .ju-tabs-slide-inner {
+	padding: 0px;
+	margin: 0px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content .ju-tabs-slide-inner h3.ju-tabs-slide-heading {
+	line-height: 35px;
+	position: relative;
+	cursor: pointer;
+	margin: 0px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content .ju-tabs-slide-inner h3.ju-tabs-slide-heading span {
+	display: block;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-panels .ju-tabs-slide-content .ju-tabs-slide-inner div.ju-tabs-slide-subcontent {
+	padding: 10px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-nav {
+	position: relative;
+	float: left;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-nav span {
+	cursor: pointer;
+	margin-right: 5px;
+	font-weight: bold;
+	display: block;
+	position: relative;
+	float: left;
+	background: none repeat scroll 0px 0px #F5F5F5;
+	padding: 5px;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-nav span.active {
+	background: none repeat scroll 0px 0px #FAFAFA;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-buttons {
+	position: relative;
+	float: right;
+}
+
+.ju-tabs-wrap .ju-tabs-slide-buttons span {
+	cursor: pointer;
+	margin-left: 5px;
+	display: block;
+	position: relative;
+	padding: 5px;
+	float: left;
+	background: none repeat scroll 0px 0px #F5F5F5;
+	text-align: left;
+}

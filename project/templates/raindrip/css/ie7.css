@@ -1,0 +1,23 @@
+section{
+
+}
+
+header{
+    border-bottom:2px solid #DEDEDE;
+    height:200px;
+}
+
+.home-contaioner .title-ctc {
+    width:345px;
+}
+
+.home-kits-container .titleKits {
+    width: 980px;
+}
+
+.glass-outer{
+    margin-top:13px;
+    background-image: url("/templates/raindrip/images/mag-lupe.png");
+    line-height: 30px;
+}
+

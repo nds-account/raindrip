@@ -1,0 +1,105 @@
+
+/* 2014 JANUARY STYLES CHANGES */
+#wbenc-logo-footer{
+    float: left;
+}
+
+.home-article{
+width: 50%;
+}
+
+
+.home-article h1{
+    font-size: 38px;
+    color:#72A53D;
+    font-family: 'open_sanssemibold',sans-serif;
+
+}
+
+.home-article p{
+    font-size: 13px;
+    color:#211f1f;
+    font-family: Arial;
+    line-height: 130%;
+
+}
+
+.right-article{
+ float:right;
+}
+
+.left-article{
+ float:left;
+}
+
+
+
+
+
+
+    <div id="green-wrapper">
+
+        <div class="left-content">
+
+
+
+            <div id="LeftPane" runat="server" class="col1"></div>
+            <div id="MiddlePane" runat="server" class="col2"></div>
+
+
+        </div>
+        <div class="right-content">
+             <div class="logo-360-new">
+                <a target="_blank" href="http://www.connex360.com/connex360/login.aspx"><img alt="Log into 360º Connex" src="<%= SkinPath %>../_common/images/login-360.png" /></a>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?</div><!-- END DIV ID WRAPPER-->
+<div id="footer">
+    <div id="wbenc-logo-footer">
+        <a target="_blank" href="http://www.wbenc.org/">
+            <img style="width: 85px; height: 38px;" src="/Portals/0/images/wbemc_icon.png" alt="">
+        </a>
+    </div>
+    <div class="social-icons">
+        <div class="addthis_toolbox addthis_default_style" style="padding-top:4px;">
+            <a class="addthis_button_favorites"></a>
+            <a class="addthis_button_email"></a>
+            <a class="addthis_button_print"></a>
+
+            <a class="addthis_button_facebook"></a>
+            <a class="addthis_button_twitter"></a>
+        </div>
+        <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=xa-4c3a903377274002"></script>
+
+    </div>
+</div>
+
+
+<div class="post_footer" >
+
+    <div id="dnn_ctr388_HtmlModule_lblContent" class="Normal">
+        <div ><a href="/Home.aspx">Home</a> | <a href="/TermsandConditions.aspx">Terms and Conditions</a> | <a href="/PrivacyPolicy.aspx">Privacy Policy</a> | <a href="/OurCommitmentToYou/OurTeam/Careers.aspx">Careers</a> | <a href="/WebsiteMap.aspx">Site Map</a> <span class="right-footer-spn">©2013 Connex International.</span></div>
+    </div>
+    <br/><br/>
+    <div class="radFoot">Since 1981, Connex International has been a leader in <a href="/Home.aspx" class="seo">audio and web conferencing services</a>. See why more and more growing companies are choosing us as their <br/><a href="/Home.aspx" class="seo">teleconferencing service</a> partner—not because they have to, but because they want to. Conference with confidence<sup><span style="font-size: 8px;">SM</span></sup>.</div>
+</div>
+
+
+

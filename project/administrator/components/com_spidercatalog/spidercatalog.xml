@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+  
+<extension type="component" version="3.0" method="upgrade">
+        <name>COM_SPIDERCATALOG</name> 
+        <author>Web-Dorado</author> 
+		<creationDate>May 2012</creationDate>
+		<copyright>Copyright (C) 2011 Web-Dorado.com 2011. All rights reserved.</copyright> 
+		<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+        <authorEmail>info@web-dorado.com</authorEmail> 
+        <authorUrl>http://www.Web-Dorado.com</authorUrl> 
+        <version>1.8.1</version> 
+        <description>
+			Spider Catalog for Joomla! is a convenient tool for organizing the products represented on your website into catalogs	
+		</description>
+	<install>
+    		<sql>
+     			 <file charset="utf8" driver="mysql">install.mysql.sql</file>
+    		</sql>
+ 	 </install>
+ 		 <uninstall>
+    			<sql>
+     			 <file charset="utf8" driver="mysql">uninstall.mysql.sql</file>
+    			</sql>
+  		</uninstall>
+
+
+	<files>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>models</folder>
+		<folder>js</folder>
+		<folder>spiderBox</folder>
+		<folder>views</folder>
+		<filename>router.php</filename>
+		<filename>controller.php</filename>
+		<filename>spidercatalog.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+                <language tag="en-GB">en-GB.com_spidercatalog.ini</language>
+    </languages>
+	<media folder="admin" destination="com_spidercatalog">
+				<folder>upload</folder>
+    </media>
+ <administration>
+			<menu link="option=com_spidercatalog" >COM_SPIDERCATALOG</menu>
+			<submenu>
+                        <menu controller="category">COM_SPIDERCATALOG_CATEGOTIES</menu>
+                        <menu controller="products">COM_SPIDERCATALOG_PRODUCTS</menu>
+						<menu controller="options">COM_SPIDERCATALOG_OPTIONS</menu>
+			</submenu>
+	        
+			
+			<files folder="admin">
+		    <folder>tables</folder>
+			<folder>js</folder>
+			<folder>elements</folder>
+			<folder>images</folder>
+			<filename>admin.spidercatalog.html.php</filename>
+			<filename>exportcsv.php</filename>
+			<filename>spidercatalog.php</filename>
+			<filename>toolbar.spidercatalog.html.php</filename>
+			<filename>install.mysql.sql</filename>
+	    	<filename>uninstall.mysql.sql</filename>
+			<filename>index.html</filename>
+		</files>
+		<languages folder="admin">
+		<language tag="en-GB">en-GB.com_spidercatalog.sys.ini</language>
+        </languages>
+ 	</administration>
+</extension>

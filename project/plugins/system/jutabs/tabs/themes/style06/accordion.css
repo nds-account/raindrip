@@ -1,0 +1,57 @@
+
+
+.style06-accordion {
+	padding: 0px;
+}
+
+.style06-accordion .ju-tabs-container {
+	border: 0px none;
+}
+
+.style06-accordion ul.ju-tabs-accordion {
+}
+
+.style06-accordion ul.ju-tabs-accordion-horizontal li h3.ju-tabs-accordion-title {
+	margin: 2px ! important;
+}
+
+.style06-accordion ul.ju-tabs-accordion-vertical li.jutabs-item {
+	margin: 5px 0px;
+}
+
+.style06-accordion ul.ju-tabs-accordion li h3.ju-tabs-accordion-title.active {
+	color: #EE9900;
+	background: url("images/tab_bg2.png") repeat-x scroll left top transparent;
+}
+
+.style06-accordion ul.ju-tabs-accordion li h3.ju-tabs-accordion-title {
+	text-transform: uppercase;
+	font-size: 12px;
+/*	background: url("images/tab_bg2.png") repeat-x scroll left top transparent;*/
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid #E0E0E0;
+}
+
+.style06-accordion ul.ju-tabs-accordion li h3.ju-tabs-accordion-title span.ju-tabs-accordion-arrow {
+}
+
+.style06-accordion ul.ju-tabs-accordion li div.ju-tabs-accordion-content {
+	background: none repeat scroll 0% 0% #FFFFFF;
+}
+
+.style06-accordion ul.ju-tabs-accordion-horizontal li div.ju-tabs-accordion-content {
+	border: 1px solid #E7E7E7;
+	border-radius: 5px 5px 5px 5px;
+	margin: 3px;
+}
+
+.style06-accordion ul.ju-tabs-accordion-vertical li div.ju-tabs-accordion-content {
+/*	border: 1px solid #E7E7E7;*/
+	border-radius: 5px 5px 5px 5px;
+	margin: 5px 0px;
+}
+
+.style06-accordion ul.ju-tabs-accordion li div.ju-tabs-accordion-subcontent {
+	padding: 10px;
+	color: #0798D7;
+}

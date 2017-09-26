@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>MultimediaBox Module</name>
+	<author>YouJoomla.com</author>
+	<creationDate>5-14-2014</creationDate>
+	<license>commercial</license>
+	<authorEmail>youjoomla@gmail.com</authorEmail>
+	<authorUrl>www.youjoomla.com</authorUrl>
+	<version>3.0.8</version>
+	<compatibility>
+		<version>2.5</version>
+		<version>3</version>
+	</compatibility>
+	<description>
+		<![CDATA[<style type="text/css" media="all">#wrap1 {padding:0px 0px 4px 0px;}h1 {clear:both;font-family: Arial Narrow,sans-serif;font-size:18px;margin:0px 0px 12px 0px;padding:0px 0px 1px 10px;color:#C64934;}.wrap2 {background:#fff;}</style><div id="holdthem"><h1>Youjoomla Multi Media Box Module ver.3.0.4 for Joomla 1.6.x</h1><div class="wrap2"><a title="Visit the official website!" href="http://www.youjoomla.com"> <img style="float:left;border:0px solid #CFCFCF;margin:0px 15px 4px 22px;" src="../modules/mod_yj_multimediabox/images/yj_extensions.jpg" border="0" alt="Logo" /></a>See it in action <a target="_blank" href="http://extensions.youjoomla.info/multimedia-box.html">You Events</a>.<br />Visit the official website! <a target="_blank" href="http://www.youjoomla.com/">www.youjoomla.com</a>.<br /><br /><br /><br /><b>For detail instructions, additional info and demo please visit <a href="http://extensions.youjoomla.info/multimedia-box.html" target="_blank">Multimedia Box 3.0 Demo</a>. If you have more question visit <a title="Visit the official website!" href="http://www.youjoomla.com" target="_blank" >Youjoomla.com</a></br> For support visit <a href="http://www.youjoomla.com/joomla_support/multimediabox/" target="_blank">Multi Media Box Forums </a></b></div> <br/><br/><b>Version 3.0</b><br/>Initial Release<br/></div>]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yj_multimediabox.ini</language>
+		<language tag="en-GB">en-GB.mod_yj_multimediabox.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_yj_multimediabox">mod_yj_multimediabox.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>elements</folder>
+		<folder>images</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_yj_multimediabox/elements">
+			<fieldset name="basic">
+				<field type="mbspacer" default="Add Multi Media Box code below" />
+				<field name="code" type="mbeditor" filter="safehtml" buttons="true" default="" description="Enter the plugin code"/>
+				<field type="spacer" />
+				<field type="spacer" />
+				<field type="spacer" />
+				<field type="spacer" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

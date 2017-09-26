@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+    <name>PLG_SYS_SCRIPTSDOWN</name>
+    <author>Michael Richey</author>
+    <creationDate>Jan 2011</creationDate>
+    <copyright>Copyright (C) 2008 Michael Richey. All rights reserved.</copyright>
+    <license>GNU General Public License</license>
+    <authorEmail>scriptsdown@richeyweb.com</authorEmail>
+    <authorUrl>http://www.richeyweb.com</authorUrl>
+    <version>1.17</version>
+    <description>PLG_SYS_SCRIPTSDOWN_DESC</description>
+    <languages>
+        <language tag="en-GB">en-GB.plg_system_scriptsdown.ini</language>
+        <language tag="en-GB">en-GB.plg_system_scriptsdown.sys.ini</language>
+    </languages>
+    <files>
+        <filename plugin="scriptsdown">scriptsdown.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="pretty" type="radio" class="radio btn-group" label="PLG_SYS_SCRIPTSDOWN_PRETTY_LABEL" description="PLG_SYS_SCRIPTSDOWN_PRETTY_DESC" default="0">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="stripcomments" type="radio" class="radio btn-group" label="PLG_SYS_SCRIPTSDOWN_STRIPCOMMENTS_LABEL" description="PLG_SYS_SCRIPTSDOWN_STRIPCOMMENTS_DESC" default="0">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="sanitize" type="radio" class="radio btn-group" label="PLG_SYS_SCRIPTSDOWN_SANITIZE_LABEL" description="PLG_SYS_SCRIPTSDOWN_SANITIZE_DESC" default="0">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field name="exclude" type="radio" class="radio btn-group" label="PLG_SYS_SCRIPTSDOWN_EXCLUDE_LABEL" description="PLG_SYS_SCRIPTSDOWN_EXCLUDE_DESC" default="1">
+                    <option value="1">JYes</option>
+                    <option value="0">JNo</option>
+                </field>
+                <field name="omit" type="textarea" rows="10" cols="25" label="PLG_SYS_SCRIPTSDOWN_OMIT_LABEL" description="PLG_SYS_SCRIPTSDOWN_OMIT_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

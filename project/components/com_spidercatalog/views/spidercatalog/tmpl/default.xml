@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<metadata>
+	<layout title="Products list">
+		<message></message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request" addfieldpath="/administrator/components/com_spidercatalog/elements/">
+
+			<field name="select_categories" 
+			type="selectcategory" 
+			key_field="id"
+			value_field="name" 
+			label="Select category"
+			default="All categories"
+			>
+			</field>
+
+			<field name="show_category_details" type="radio" default="1" label="Show category details" class="radio btn-group"	 >
+			  <option class="btn" value="1">Show</option>
+			  <option class="btn" value="0">Hide</option>
+			</field>
+			
+			<field name="display_type" type="radio" default="cell" label="Product display type" class="radio btn-group"	>
+			  <option  class="btn" value="cell">Cells</option>
+			  <option   class="btn" value="list">List</option>
+			  <option   class="btn" value="thumb">Cells2</option>
+			  <option   class="btn" value="cube">Wide Cells</option>
+			  <option   class="btn" value="cube2">Thumbnails</option>
+			  <option   class="btn" value="cube3">Cells3</option>
+			</field>
+			
+			<field name="show_subcategories" type="radio" default="1" label="Show Subcategories"  class="radio btn-group">
+			  <option class="btn" value="1">Yes</option>
+			  <option class="btn" value="0">No</option>
+			</field>
+			
+			
+			<field name="show_subcategories_products" type="radio" default="2" label="Show Subcategories Products"  class="radio btn-group">
+			  <option class="btn" value="1"> All</option>
+			  <option class="btn" value="0">No</option>
+			  <option class="btn" value="2" >Chosen</option>
+			</field>
+			
+			
+			<field name="show_products" type="radio" default="1" label="Show Products"  class="radio btn-group">
+			  <option class="btn" value="1">Yes</option>
+			  <option class="btn" value="0">No</option>
+			</field>
+		</fieldset>
+	</fields>
+	
+	</metadata>

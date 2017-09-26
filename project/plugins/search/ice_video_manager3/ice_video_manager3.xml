@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_ice_video_manager3</name>
+    <author>SDS International</author>
+    <creationDate>2014-06-05</creationDate>
+    <copyright>Copyright (C) 2014 SDS International. All rights reserved worldwide.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@sdsinternational.com</authorEmail>
+    <authorUrl>http://www.sdsinternational.com</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SEARCH_COM_ICE_VIDEO_MANAGER3_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="ice_video_manager3">ice_video_manager3.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        
+			<language tag="en-GB">language/en-GB.plg_search_ice_video_manager3.ini</language>
+			<language tag="en-GB">language/en-GB.plg_search_ice_video_manager3.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_ICE_VIDEO_MANAGER3_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_ICE_VIDEO_MANAGER3_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

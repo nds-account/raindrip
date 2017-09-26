@@ -1,0 +1,271 @@
+//--------------------------------
+// Helper classes from HTML5 Boilerplate
+//--------------------------------
+/*
+ * Image replacement
+ */
+.ir {
+    
+    text-shadow: none;
+    color: transparent;
+    display: block;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* Clear floats */
+.clear-left { clear: left; }
+.clear-right { clear: right; }
+.clear{ clear: both; }
+
+/* Chrome Frame prompt */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+$experimental-support-for-pie: true;
+
+// It is recommended that you use Sass's @extend directive to apply the behavior
+// to your PIE elements. To assist you, Compass provides this variable.
+// When set, it will cause the `@include pie` mixin to extend this class.
+// The class name you provide should **not** include the `.`.
+$pie-base-class: false !default;
+
+// The default approach to using PIE.
+// Can be one of:
+//
+// * relative (default)
+// * z-index
+// * none
+$pie-default-approach: relative !default;
+
+// The location of your PIE behavior file
+// This should be root-relative to your web server
+// relative assets don't work. It is recommended that
+// you set this yourself.
+$pie-behavior: stylesheet-url("PIE.htc") !default;
+
+// When using the z-index approach, the
+// first ancestor of the PIE element at
+// or before the container's opaque background
+// should have a z-index set as well to ensure
+// propert z-index stacking.
+//
+// The `$position` argument must be some non-static
+// value (absolute, relative, etc.)
+@mixin pie-container($z-index: 0, $position: relative) {
+  z-index: $z-index;
+  position: $position;
+}
+
+// PIE elements must have this behavior attached to them.
+// IE is broken -- it doesn't think of behavior urls as
+// relative to the stylesheet. It considers them relative
+// to the webpage. As a result, you cannot reliably use
+// compass's relative_assets with PIE.
+//
+// * `$approach` - one of: relative, z-index, or none
+// * `$z-index` - when using the z-index approach, this
+//                is the z-index that is applied.
+@mixin pie-element(
+  $approach: $pie-default-approach,
+  $z-index: 0
+) {
+  /*behavior: $pie-behavior;*/
+  @if $approach == relative {
+    position: relative;
+  }
+  @else if $approach == z-index {
+    z-index: $z-index;
+  }
+}
+
+// a smart mixin that knows to extend or include pie-element according
+// to your stylesheet's configuration variables.
+@mixin pie($base-class: $pie-base-class) {
+  @if $base-class {
+    @extend .#{$base-class};
+  }
+  @else {
+    @include pie-element;
+  }
+}
+
+// Watch `$n` levels of ancestors for changes to their class attribute
+// So that cascading styles will work correctly on the PIE element.
+@mixin pie-watch-ancestors($n) {
+  -pie-watch-ancestors: $n;
+}
+
+$pie-behavior: url("css/PIE.htc");
+$pie-base-class: pie-element;
+.pie-element {
+  @include pie-element(relative);
+}
+
+//--------------------------------
+// Helper styles from HTML5 Boilerplate
+//--------------------------------
+
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img {
+    vertical-align: middle;
+}
+
+/* Remove default fieldset styles. */
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+
+* {
+    /*@include box-sizing(border-box); */
+}
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_ICE_VIDEO_MANAGER3_FORM_LBL_VIDEO_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_ICE_VIDEO_MANAGER3_FORM_LBL_VIDEO_CREATED_BY"
+            description="COM_ICE_VIDEO_MANAGER3_FORM_DESC_VIDEO_CREATED_BY"  /> 
+
+       <field name="name" type="text"
+                
+            label="COM_ICE_VIDEO_MANAGER3_FORM_LBL_VIDEO_NAME"
+            description="COM_ICE_VIDEO_MANAGER3_FORM_DESC_VIDEO_NAME" 
+                
+                
+                 required="true" 
+            filter="safehtml" /> 
+
+ <field name="category" type="foreignkey" class="inputbox"
+            label="COM_ICE_VIDEO_MANAGER3_FORM_LBL_VIDEO_CATEGORY"
+            description="COM_ICE_VIDEO_MANAGER3_FORM_DESC_VIDEO_CATEGORY" input_type="list" table="#__com_ice_video_manager_cats" key_field="id" value_field="name"  /> 
+
+       <field name="filter_category" type="sql" class="inputbox"
+            onchange="this.form.submit();"
+            query="SELECT 0 AS `id`, '- Please select category -' AS `val` UNION SELECT `id`, `name` AS val FROM `#__com_ice_video_manager_cats`" key_field="id" value_field="val"
+             /> 
+
+       <field name="url" type="text"
+                
+            label="COM_ICE_VIDEO_MANAGER3_FORM_LBL_VIDEO_URL"
+            description="COM_ICE_VIDEO_MANAGER3_FORM_DESC_VIDEO_URL" 
+                
+                
+                 required="true" 
+            filter="url" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" />
+
+	</fieldset>
+
+</form>

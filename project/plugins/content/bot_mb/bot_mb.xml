@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+	<name>Multi Media Box 3.0</name>
+	<author>YouJoomla.com</author>
+	<creationDate>5-14-2014</creationDate>
+	<copyright>(C)2011 Youjoomla.com</copyright>
+	<authorEmail>youjoomla@gmail.com</authorEmail>
+	<version>3.0.8</version>
+	<authorUrl>www.youjoomla.com</authorUrl>
+	<description>
+		<![CDATA[<style type="text/css" media="all">#wrap1 {padding:0px 0px 4px 0px;}h1 {clear:both;font-family: Arial Narrow,sans-serif;font-size:18px;margin:0px 0px 12px 0px;padding:0px 0px 1px 10px;color:#C64934;}.wrap2 {background:#fff;}</style><div id="holdthem"><h1>Youjoomla Multi Media Box ver.3.0.6 for Joomla 1.7 and UP</h1><div class="wrap2"><a title="Visit the official website!" href="http://www.youjoomla.com"> <img style="float:left;border:0px solid #CFCFCF;margin:0px 15px 4px 22px;" src="../plugins/content/bot_mb/bot_mb/images/logotm.jpg" border="0" alt="Logo" /></a>See it in action <a target="_blank" href="http://extensions.youjoomla.info/multimedia-box.html">Multimedia Box demo</a>.<br />Visit the official website! <a target="_blank" href="http://www.youjoomla.com/">www.youjoomla.com</a>.<br /><br /><br /><br /><b>For detail instructions, additional info and demo please visit <a href="http://extensions.youjoomla.info/multimedia-box.html" target="_blank">Multimedia Box 3.0 Demo</a>. If you have more question visit <a title="Visit the official website!" href="http://www.youjoomla.com" target="_blank" >Youjoomla.com</a></br> For support visit <a href="http://www.youjoomla.com/joomla_support/multimediabox/" target="_blank">Multi Media Box Forums </a></b></div> <br/><br/><b>Version 3.0</b><br/>Initial Release<br/><h4><br/><b></h4><h4>&nbsp;</h4></div>]]>
+	</description>
+	<files>
+		<filename plugin="bot_mb">bot_mb.php</filename>
+		<filename>index.html</filename>
+		<folder>bot_mb</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_content_bot_mb.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="image_folder" type="folderlist" default="" hide_none="blank" label="Default image folder" directory="images" description="Default image folder where the images for multimedia box will be placed. Default is images." />
+				<field name="over_opacity" type="text" default="0.7" label="Overlay opacity" description="0 is completely transparent" />
+				<field name="mbox_theme" type="list" default="Dark" label="MediaboxAdvanced Template" description="MediaboxAdvanced comes with 4 templates" >
+					<option value="Dark">Dark</option>
+					<option value="Light">Light</option>
+					<option value="Minimal">Minimal</option>
+					<option value="Smooth">Smooth</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

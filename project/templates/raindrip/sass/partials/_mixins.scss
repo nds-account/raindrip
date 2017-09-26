@@ -1,0 +1,258 @@
+@mixin rounded-equal($ratio){
+    -webkit-border-radius: $ratio;
+    -moz-border-radius:  $ratio;
+    border-radius:  $ratio;
+}
+
+@mixin rounded-bottom($ratio){
+    -moz-border-radius-bottomright: $ratio;
+    -webkit-border-bottom-right-radius: $ratio;
+    border-bottom-right-radius: $ratio;
+    -moz-border-radius-bottomleft: $ratio;
+    -webkit-border-bottom-left-radius: $ratio;
+    border-bottom-left-radius: $ratio;
+}
+
+
+@mixin rounded-top($ratio){
+    -moz-border-radius-topright: $ratio;
+    -webkit-border-top-right-radius: $ratio;
+    border-top-right-radius: $ratio;
+    -moz-border-radius-topleft: $ratio;
+    -webkit-border-top-left-radius:$ratio;
+    border-top-left-radius: $ratio;
+}
+
+
+
+@mixin reset-b-p-m(){
+    border:0px;
+    padding: 0px;
+    margin:0px;
+}
+
+@mixin center-1000(){
+    width:1000px;
+    margin: 0 auto;
+}
+
+@mixin button-grandient(){
+    background-image: -o-linear-gradient(bottom, #84C130 0%, #75B025 61%);
+    background-image: -moz-linear-gradient(bottom, #84C130 0%, #75B025 61%);
+    background-image: -webkit-linear-gradient(bottom, #84C130 0%, #75B025 61%);
+    background-image: -ms-linear-gradient(bottom, #84C130 0%, #75B025 61%);
+    background-image: linear-gradient(to bottom, #84C130 0%, #75B025 61%);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.13)!important;
+    -webkit-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.13)!important;
+
+}
+
+
+@mixin button-grandientBlue(){
+    background-image: -o-linear-gradient(bottom, #1da8e1 0%, #0799d4  61%);
+    background-image: -moz-linear-gradient(bottom, #1da8e1 0%, #0799d4  61%);
+    background-image: -webkit-linear-gradient(bottom, #1da8e1 0%, #0799d4  61%);
+    background-image: -ms-linear-gradient(bottom, #1da8e1 0%, #0799d4  61%);
+    background-image: linear-gradient(to bottom, #1da8e1 0%, #0799d4  61%);
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.13)!important;
+    -webkit-text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.13)!important;
+
+}
+
+
+
+@mixin gray-borderbox(){
+    @include rounded-equal(5px);
+    border-top: 1px solid $gray8;
+    border-left: 1px solid $gray8;
+    border-right: 1px solid $gray8;
+    border-bottom: 3px solid $gray8;
+}
+
+@mixin gray-borderbox-thiner(){
+    @include rounded-equal(5px);
+    border-top: 1px solid $gray8;
+    border-left: 1px solid $gray8;
+    border-right: 1px solid $gray8;
+    border-bottom: 2px solid $gray8;
+}
+
+@mixin width-float($width, $float){
+    float:$float;
+    width:$width;
+}
+
+@mixin form-input($width){
+    color: $gray10;
+    font-size:14px;
+    height:30px;
+    width:$width;
+    padding-left:10px;
+
+    -webkit-box-shadow: 0px 1px 2px 0px $gray3;
+    -moz-box-shadow:    0px 1px 2px 0px $gray3;
+    box-shadow:         0px 1px 2px 0px $gray3;
+    border: $gray3 1px solid;
+
+}
+
+@mixin button-base(){
+    display:block;
+    text-align:center;
+    border: 1px solid $green9;
+
+    text-decoration: none;
+    @include rounded-equal(4px);
+    text-transform:uppercase;
+    color:$white;
+
+    @include button-grandient();
+}
+
+
+@mixin button-base-lower(){
+    display:block;
+    text-align:center;
+    border: 1px solid $green9;
+
+    text-decoration: none;
+    @include rounded-equal(4px);
+    color:$white;
+    @include button-grandient();
+}
+
+
+
+@mixin button-base-alt(){
+    display:block;
+    text-align:center;
+    border: 1px solid $green9;
+    text-decoration: none;
+    @include rounded-equal(4px);
+    text-transform:uppercase;
+    color:$white;
+    @include button-grandientBlue();
+}
+
+
+
+@mixin create-button($width){
+    /*height:51px;
+    line-height:51px;
+    */
+    padding-top:16px;
+    padding-bottom:16px;
+    font-size:18px;
+    @include button-base();
+    width:$width;
+}
+
+
+@mixin create-button-small2($width){
+    /*height:51px;
+    line-height:51px;
+    */
+    padding-top:13px;
+    padding-bottom:13px;
+    font-size:18px;
+    @include button-base-lower();
+    width:$width;
+}
+
+
+
+
+@mixin create-button-alt($width){
+    /*height:51px;
+    line-height:51px;*/
+    padding-top:16px;
+    padding-bottom:16px;
+    font-size:18px;
+    @include button-base-alt();
+    width:$width;
+}
+
+
+
+
+@mixin create-button-small($width){
+    /*height:26px;
+    line-height:26px;*/
+    padding-top:6px;
+    padding-bottom:6px;
+    font-size:12px;
+    width:$width;
+    @include button-base();
+}
+
+@mixin title1(){
+    font-size:14px;
+    color: $gray9;
+}
+
+@mixin greenbtn2(){
+    float:right;
+    text-align:center;
+    padding-top:6px;
+    padding-bottom:6px;
+    width:110px;
+    display:block;
+    border: 1px solid $green9;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    @include rounded-equal(4px);
+    text-transform:uppercase;
+    color:$white;
+    font-size:12px;
+    @include button-grandient();
+}
+
+@mixin greenGradient {
+    background: #8ac934;
+    background-image: url('/templates/raindrip/images/mag-lupe.png');
+
+    background-image: url('/templates/raindrip/images/mag-lupe.png'), -moz-linear-gradient(top, #8ac934 0%, #76b126 100%);
+    background-image: url('/templates/raindrip/images/mag-lupe.png'),  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8ac934), color-stop(100%,#76b126));
+
+    background-image: url('/templates/raindrip/images/mag-lupe.png'),  -webkit-linear-gradient(top, #8ac934 0%,#76b126 100%);
+    background-image: url('/templates/raindrip/images/mag-lupe.png'),  -o-linear-gradient(top, #8ac934 0%,#76b126 100%);
+    background-image: url('/templates/raindrip/images/mag-lupe.png'),  -ms-linear-gradient(top, #8ac934 0%,#76b126 100%);
+    background-image: url('/templates/raindrip/images/mag-lupe.png'),  linear-gradient(to bottom, #8ac934 0%,#76b126 100%);
+
+    cursor:pointer;
+}
+
+
+@mixin darkGreenGradient{
+    background: #69ab0f; /* Old browsers */
+    background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #69ab0f), color-stop(100%, #58910b));
+    background:-webkit-linear-gradient(#69ab0f,#58910b);background:-moz-linear-gradient(#69ab0f,#58910b);
+    background:-o-linear-gradient(#69ab0f,#58910b);-pie-background:linear-gradient(#69ab0f,#58910b);
+    background:linear-gradient(#69ab0f,#58910b)
+}
+
+@mixin darkBlueGradient{
+    background: #0090cb; /* Old browsers */
+    background: -moz-linear-gradient(top, #0090cb 0%, #007aac 52%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0090cb), color-stop(52%,#007aac)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #0090cb 0%,#007aac 52%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #0090cb 0%,#007aac 52%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #0090cb 0%,#007aac 52%); /* IE10+ */
+    background: linear-gradient(to bottom, #0090cb 0%,#007aac 52%); /* W3C */
+
+}
+
+
+@mixin bookFont{
+    font-family: "freight-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+
+@mixin boldFont{
+    font-family: "freight-sans-pro",sans-serif;
+    font-style: normal;
+    font-weight: 700;
+}

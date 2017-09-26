@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+	<name>JU Tabs</name>
+	<author>JoomUltra</author>
+	<creationDate>Aug 2013</creationDate>
+	<copyright>Copyright (C) 2010 - 2013 JoomUltra. All rights reserved.</copyright>
+	<license>License GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<authorEmail>admin@joomultra.com</authorEmail>
+	<authorUrl>www.joomultra.com</authorUrl>
+	<version>2.4.7</version>
+	<description>
+		<![CDATA[
+		<div style='font-weight: normal'>
+		<h2 style='color: #0A71A5;'>JU Tabs Module</strong></h2>
+		<span style='color: #ff0000;'><strong>Features:</strong></span>
+		<br/>
+		Allows to load Tabs/Accordion/Simple slideshow into module. Support multi types of content: Module name/Module id/Article id/Category/K2Item id/K2 category/HTML content. Multi themes and many effects.
+		<br/><br/>
+		<strong><span style='color: #ff0000;'>Usage Instructions:</span></strong><br />
+		Requirements: Joomla! 2.5.x, Joomla! 3.x<br/>
+		This module require jQuery javascript library to work. If your site has not been loaded jQuery or get jQuery conflict issue, you should install <b>Plugin <a href="http://extensions.joomla.org/extensions/core-enhancements/performance/jquery-scripts/18327" target="_blank" title="Download jQuery Easy">jQuery Easy</a></b> <i>(Remember activate this plugin after installing it)</i>.<br/>
+		This module works with <b>Plugin JU Tabs</b>, so please make sure you've installed and actived this plugin.<br/>
+		You can hover mouse on each field label to see quick instruction<br/>
+		Full usage instruction please see in plugin setting.
+		<br /><br />
+		<strong><span style='color: #ff0000;'>Upgrade Methods:</span><br /></strong>
+		<ol>
+		  <li>Standard joomla uninstall / reinstall method. Module supports upgrade method. </li>
+		  <li>You can install new version directly over this version. Uninstallation is not required. </li>
+		  <li>Backup any customized file before upgrading.</li>
+		</ol>
+		<br />
+		<strong><span style='color: #ff0000;'>Support:</span></strong>
+		<br />
+		<ul>
+		<li>If you need any help, please ask in <a href="http://www.joomultra.com/forums.html" title="JoomUltra Forum">our forum</a>.</li>
+		<li>If you use JU Tabs, please post a review for <a href="http://extensions.joomla.org/extensions/news-display/article-elements/articles-tabs/22750" target="_blank" title="Post a review for JU Tabs">JU Tabs on JED</a></li>
+		</ul>
+		<br /><br />
+		<small>Copyright © 2010 - 2013 <a href='http://www.joomultra.com/' title='Visit JoomUltra.com!'>JoomUltra.com</a>.</small>
+		</div>
+		]]>
+	</description>
+	<files>
+		<filename module="mod_jutabs">mod_jutabs.php</filename>
+		<folder>admin</folder>
+		<folder>assets</folder>
+		<folder>profiles</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jutabs.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MOD_JUTABS" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jutabs/admin/elements/">
+			<fieldset name="basic">
+				<field 
+					name="juformstyle" 
+					type="juformstyle" />
+				
+				<field 
+					name="jurequest"
+					type="jurequest" />
+					
+				<field 
+					name="profile" 
+					type="juprofile" 
+					label="MOD_JUTABS_PROFILE" 
+					description="MOD_JUTABS_PROFILE_DESC"/>
+				
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				
+				<field
+					name="tabname"
+					type="text"
+					default=""
+					label="MOD_JUTABS_TABNAME"
+					description="MOD_JUTABS_TABNAME_DESC" />
+					
+				<field type="jugroup"
+					name="content_type_settings"
+					title="MOD_JUTABS_CONTENT_TYPE_SETTINGS" />
+					
+				<field name="loadcontent_type"
+					type="list"
+					default=""
+					class="jufilter"
+					label="MOD_JUTABS_LOADCONTENT_TYPE"
+					description="MOD_JUTABS_LOADCONTENT_TYPE_DESC">
+					<option
+						value="moduleid">MOD_JUTABS_MODULEID</option>
+					<option
+						value="modulename">MOD_JUTABS_MODULENAME</option>
+					<option
+						value="moduleposition">MOD_JUTABS_MODULEPOSITION</option>
+					<option
+						value="articleid">MOD_JUTABS_ARTICLEID</option>
+					<option
+						value="catid">MOD_JUTABS_CATID</option>
+					<option
+						value="k2itemid">MOD_JUTABS_K2ITEMID</option>
+					<option
+						value="k2catid">MOD_JUTABS_K2CATID</option>
+					<option
+						value="sql">MOD_JUTABS_SQL</option>
+					<option
+						value="custom">MOD_JUTABS_CUSTOM_CONTENT</option>
+				</field>
+				
+				<field name="loadcontent_value"
+					type="text"
+					default=""
+					size="40"
+					class="jufilter-loadcontent_type-moduleid-modulename-moduleposition-articleid-catid-k2itemid-k2catid-sql"
+					label="MOD_JUTABS_LOADCONTENT_VALUE"
+					description="MOD_JUTABS_LOADCONTENT_VALUE_DESC" 
+				/>
+				
+				<field type="jumessage"
+					description="MOD_JUTABS_SUB_TABS_INSTRUCTION"
+					class="jufilter-loadcontent_type-custom juicon-info"
+				/>
+				
+				<field name="sub_tabs"
+					type="textarea"
+					default=""
+					rows="15"
+					cols="60"
+					filter="raw"
+					class="jufilter-loadcontent_type-custom ju-fullwidth"
+					label="MOD_JUTABS_SUB_TABS"
+					description="MOD_JUTABS_SUB_TABS_DESC" 
+				/>
+				
+				<field type="jugroup"
+					name="basic_settings"
+					title="MOD_JUTABS_BASIC_SETTINGS" />
+					
+				<field name="theme"
+					type="jutabstheme"
+					label="MOD_JUTABS_TAB_THEME"
+					description="MOD_JUTABS_TAB_THEME_DESC"
+				/>
+				
+				<field name="width"
+					type="text"
+					default=""
+					label="MOD_JUTABS_WIDTH"
+					description="MOD_JUTABS_WIDTH_DESC" 
+				/>
+				
+				<field name="minwidth"
+					type="text"
+					default=""
+					label="MOD_JUTABS_MIN_WIDTH"
+					description="MOD_JUTABS_MIN_WIDTH_DESC" 
+				/>
+				
+				<field name="maxwidth"
+					type="text"
+					default=""
+					label="MOD_JUTABS_MAX_WIDTH"
+					description="MOD_JUTABS_MAX_WIDTH_DESC" 
+				/>
+				
+				<field name="height"
+					type="text"
+					default=""
+					label="MOD_JUTABS_HEIGHT"
+					description="MOD_JUTABS_HEIGHT_DESC" 
+				/>
+				
+				<field name="widthtabs"
+					type="text"
+					default=""
+					label="MOD_JUTABS_WIDTH_TABS"
+					description="MOD_JUTABS_WIDTH_TABS_DESC" 
+				/>
+				
+				<field name="heighttabs"
+					type="text"
+					default=""
+					label="MOD_JUTABS_HEIGHT_TABS"
+					description="MOD_JUTABS_HEIGHT_TABS_DESC" 
+				/>
+				
+				<field name="defaultitem"
+					type="text"
+					default=""
+					label="MOD_JUTABS_DEFAULT_ITEM"
+					description="MOD_JUTABS_DEFAULT_ITEM_DESC" 
+				/>
+				
+				<field name="maxitems"
+					type="text"
+					default=""
+					label="MOD_JUTABS_MAX_ITEMS"
+					description="MOD_JUTABS_MAX_ITEMS_DESC" 
+				/>
+				
+				<field name="skipemptyitems"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_SKIP_EMPTY_ITEMS"
+					description="MOD_JUTABS_SKIP_EMPTY_ITEMS_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="history"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_HISTORY"
+					description="MOD_JUTABS_HISTORY_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="changetab"
+					type="list"
+					default=""
+					label="MOD_JUTABS_HOW_TO_CHANGE_TAB"
+					description="MOD_JUTABS_HOW_TO_CHANGE_TAB_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="mouseover">MouseOver</option>
+					<option
+						value="click">Click</option>
+					<option
+						value="dblclick">Double Click</option>
+				</field>
+				
+				<field name="initialeffect"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_INITIAL_EFFECT"
+					description="MOD_JUTABS_INITIAL_EFFECT_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="ajax"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_AJAX_LOAD"
+					description="MOD_JUTABS_AJAX_LOAD_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="duration"
+					type="text"
+					default=""
+					label="MOD_JUTABS_DURATION"
+					description="MOD_JUTABS_DURATION_DESC" />
+				
+				<field name="currentitemeasing"
+					type="list"
+					default=""
+					label="MOD_JUTABS_CURRENT_ITEM_EASING"
+					description="MOD_JUTABS_CURRENT_ITEM_EASING_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="linear">Linear</option>
+					<option
+						value="swing">Swing</option>
+					<option
+						value="easeInQuad">easeInQuad</option>
+					<option
+						value="easeOutQuad">easeOutQuad</option>
+					<option
+						value="easeInOutQuad">easeInOutQuad</option>
+					<option
+						value="easeInCubic">easeInCubic</option>
+					<option
+						value="easeOutCubic">easeOutCubic</option>
+					<option
+						value="easeInOutCubic">easeInOutCubic</option>
+					<option
+						value="easeInQuart">easeInQuart</option>
+					<option
+						value="easeOutQuart">easeOutQuart</option>
+					<option
+						value="easeInOutQuart">easeInOutQuart</option>
+					<option
+						value="easeInQuint">easeInQuint</option>
+					<option
+						value="easeOutQuint">easeOutQuint</option>
+					<option
+						value="easeInOutQuint">easeInOutQuint</option>
+					<option
+						value="easeInSine">easeInSine</option>
+					<option
+						value="easeOutSine">easeOutSine</option>
+					<option
+						value="easeInOutSine">easeInOutSine</option>
+					<option
+						value="easeInExpo">easeInExpo</option>
+					<option
+						value="easeOutExpo">easeOutExpo</option>
+					<option
+						value="easeInOutExpo">easeInOutExpo</option>
+					<option
+						value="easeInCirc">easeInCirc</option>
+					<option
+						value="easeOutCirc">easeOutCirc</option>
+					<option
+						value="easeInOutCirc">easeInOutCirc</option>
+					<option
+						value="easeInElastic">easeInElastic</option>
+					<option
+						value="easeOutElastic">easeOutElastic</option>
+					<option
+						value="easeInOutElastic">easeInOutElastic</option>
+					<option
+						value="easeInBack">easeInBack</option>
+					<option
+						value="easeOutBack">easeOutBack</option>
+					<option
+						value="easeInOutBack">easeInOutBack</option>
+					<option
+						value="easeInBounce">easeInBounce</option>
+					<option
+						value="easeOutBounce">easeOutBounce</option>
+					<option
+						value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				
+				<field name="nextitemeasing"
+					type="list"
+					default=""
+					label="MOD_JUTABS_NEXT_ITEM_EASING"
+					description="MOD_JUTABS_NEXT_ITEM_EASING_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="linear">Linear</option>
+					<option
+						value="swing">Swing</option>
+					<option
+						value="easeInQuad">easeInQuad</option>
+					<option
+						value="easeOutQuad">easeOutQuad</option>
+					<option
+						value="easeInOutQuad">easeInOutQuad</option>
+					<option
+						value="easeInCubic">easeInCubic</option>
+					<option
+						value="easeOutCubic">easeOutCubic</option>
+					<option
+						value="easeInOutCubic">easeInOutCubic</option>
+					<option
+						value="easeInQuart">easeInQuart</option>
+					<option
+						value="easeOutQuart">easeOutQuart</option>
+					<option
+						value="easeInOutQuart">easeInOutQuart</option>
+					<option
+						value="easeInQuint">easeInQuint</option>
+					<option
+						value="easeOutQuint">easeOutQuint</option>
+					<option
+						value="easeInOutQuint">easeInOutQuint</option>
+					<option
+						value="easeInSine">easeInSine</option>
+					<option
+						value="easeOutSine">easeOutSine</option>
+					<option
+						value="easeInOutSine">easeInOutSine</option>
+					<option
+						value="easeInExpo">easeInExpo</option>
+					<option
+						value="easeOutExpo">easeOutExpo</option>
+					<option
+						value="easeInOutExpo">easeInOutExpo</option>
+					<option
+						value="easeInCirc">easeInCirc</option>
+					<option
+						value="easeOutCirc">easeOutCirc</option>
+					<option
+						value="easeInOutCirc">easeInOutCirc</option>
+					<option
+						value="easeInElastic">easeInElastic</option>
+					<option
+						value="easeOutElastic">easeOutElastic</option>
+					<option
+						value="easeInOutElastic">easeInOutElastic</option>
+					<option
+						value="easeInBack">easeInBack</option>
+					<option
+						value="easeOutBack">easeOutBack</option>
+					<option
+						value="easeInOutBack">easeInOutBack</option>
+					<option
+						value="easeInBounce">easeInBounce</option>
+					<option
+						value="easeOutBounce">easeOutBounce</option>
+					<option
+						value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+				
+				<field name="swipetouch"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_SWIPETOUCH"
+					description="MOD_JUTABS_SWIPETOUCH_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="triggerwindowresize"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_TRIGGERWINDOWRESIZE"
+					description="MOD_JUTABS_TRIGGERWINDOWRESIZE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="tabclass"
+					type="textarea"
+					cols="30"
+					rows="3"
+					default=""
+					label="MOD_JUTABS_TAB_CLASS"
+					description="MOD_JUTABS_TAB_CLASS_DESC" 
+				/>
+				
+				<field name="slidetotab"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_SLIDETOTAB"
+					description="MOD_JUTABS_SLIDETOTAB_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="view"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_VIEW"
+					description="MOD_JUTABS_VIEW_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="introtext">Intro text</option>
+					<option
+						value="fulltext">Full text</option>
+				</field>
+				
+				<field name="parseplugin"
+					type="radio"
+					default=""
+					class="btn-group"
+					label="MOD_JUTABS_PARSE_PLUGIN"
+					description="MOD_JUTABS_PARSE_PLUGIN_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field type="jumessage"
+					class="box-blank"
+					description="MOD_JUTABS_SEPERATOR"
+				/>
+				
+				<field name="type"
+					type="radio"
+					default=""
+					class="jufilter btn-group"
+					label="MOD_JUTABS_TAB_TYPE_LBL"
+					description="MOD_JUTABS_TAB_TYPE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="tab">MOD_JUTABS_TAB</option>
+					<option
+						value="accordion">MOD_JUTABS_ACCORDION</option>
+					<option
+						value="slideshow">MOD_JUTABS_SLIDESHOW</option>
+				</field>
+					
+				<field name="tabeffect"
+					type="list"
+					default=""
+					class="jufilter-type-tab-slideshow"
+					label="MOD_JUTABS_TAB_EFFECT"
+					description="MOD_JUTABS_TAB_EFFECT_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="default">Default</option>
+					<option
+						value="fade">Fade</option>
+					<option
+						value="slidehorizontal">SlideHorizontal</option>
+					<option
+						value="slidevertical">SlideVertical</option>
+					<option
+						value="horizontal">Horizontal</option>
+					<option
+						value="vertical">Vertical</option>
+					<option
+						value="movehorizontal">MoveHorizontal</option>
+					<option
+						value="movevertical">MoveVertical</option>
+				</field>
+				
+				<field name="accordioneffect"
+					type="list"
+					default=""
+					class="jufilter-type-accordion"
+					label="MOD_JUTABS_ACCORDION_EFFECT"
+					description="MOD_JUTABS_ACCORDION_EFFECT_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="default">Default</option>
+					<option
+						value="fade">Fade</option>
+					<option
+						value="slide">Slide</option>
+				</field>
+				
+				<field
+					type="jugroup"
+					name="tab_settings"
+					title="MOD_JUTABS_TAB_SETTINGS"
+					class="jufilter-type-tab"
+				/>
+				
+				<field name="position"
+					type="list"
+					default=""
+					class="jufilter jufilter-type-tab"
+					label="MOD_JUTABS_POSITION"
+					description="MOD_JUTABS_POSITION_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="top">Top</option>
+					<option
+						value="bottom">Bottom</option>
+					<option
+						value="left">Left</option>
+					<option
+						value="right">Right</option>
+				</field>
+				
+				<field name="tabalign"
+					type="radio"
+					default=""
+					class="jufilter-position-top-bottom jufilter-type-tab btn-group"
+					label="MOD_JUTABS_TABALIGN"
+					description="MOD_JUTABS_TABALIGN_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="left">Left</option>
+					<option
+						value="center">Center</option>
+					<option
+						value="right">Right</option>
+					<option
+						value="justify">Justify</option>
+				</field>
+				
+				<field name="tabscroll"
+					type="radio"
+					default=""
+					class="jufilter-position-top-bottom jufilter-type-tab btn-group"
+					label="MOD_JUTABS_TABSCROLL"
+					description="MOD_JUTABS_TABSCROLL_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field
+					type="jugroup"
+					name="accordion_settings"
+					title="MOD_JUTABS_ACCORDION_SETTINGS"
+					class="jufilter-type-accordion"
+				/>
+				
+				<field name="accordionmode"
+					type="radio"
+					default=""
+					class="jufilter jufilter-type-accordion btn-group"
+					label="MOD_JUTABS_ACCORDION_MODE"
+					description="MOD_JUTABS_ACCORDION_MODE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="vertical">Vertical</option>
+					<option
+						value="horizontal">Horizontal</option>
+				</field>
+				
+				<field name="responsive"
+					type="radio"
+					default=""
+					class="jufilter-accordionmode-horizontal jufilter-type-accordion btn-group"
+					label="MOD_JUTABS_RESPONSIVE"
+					description="MOD_JUTABS_RESPONSIVE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="closetab"
+					type="radio"
+					default=""
+					class="jufilter-type-accordion btn-group"
+					label="MOD_JUTABS_CLOSE_TAB"
+					description="MOD_JUTABS_CLOSE_TAB_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="openmultitabs"
+					type="radio"
+					default=""
+					class="jufilter-accordionmode-vertical jufilter-type-accordion btn-group"
+					label="MOD_JUTABS_OPEN_MULTITABS"
+					description="MOD_JUTABS_OPEN_MULTITABS_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field
+					type="jugroup"
+					name="slideshow_settings"
+					title="MOD_JUTABS_SLIDESHOW_SETTINGS"
+					class="jufilter-type-slideshow"
+				/>
+				
+				<field name="showtitle"
+					type="radio"
+					default=""
+					class="jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SHOW_TITLE"
+					description="MOD_JUTABS_SHOW_TITLE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="nextprev"
+					type="radio"
+					default=""
+					class="jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_NEXT_PRE_BTN"
+					description="MOD_JUTABS_NEXT_PRE_BTN_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="navigation"
+					type="radio"
+					default=""
+					class="jufilter jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SHOW_NAVIGATION"
+					description="MOD_JUTABS_SHOW_NAVIGATION_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="titleinnavigation"
+					type="radio"
+					default=""
+					class="jufilter-navigation-true jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SHOW_TITLE_IN_NAVIGATION"
+					description="MOD_JUTABS_SHOW_TITLE_IN_NAVIGATION_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="controlbuttons"
+					type="radio"
+					default=""
+					class="jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SHOW_CONTROL_BTN"
+					description="MOD_JUTABS_SHOW_CONTROL_BTN_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="autoplay"
+					type="radio"
+					default=""
+					class="jufilter jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SLIDE_AUTOPLAY"
+					description="MOD_JUTABS_SLIDE_AUTOPLAY_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="intervaltime"
+					type="text"
+					default=""
+					class="jufilter-autoplay-true jufilter-type-slideshow"
+					label="MOD_JUTABS_INTERVAL_TIME"
+					description="MOD_JUTABS_INTERVAL_TIME_DESC" 
+				/>
+				
+				<field name="autopause"
+					type="radio"
+					default=""
+					class="jufilter-autoplay-true jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SLIDE_AUTOPAUSE"
+					description="MOD_JUTABS_SLIDE_AUTOPAUSE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="clickable"
+					type="radio"
+					default=""
+					class="jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_SLIDE_CLICKABLE"
+					description="MOD_JUTABS_SLIDE_CLICKABLE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field name="rotate"
+					type="radio"
+					default=""
+					class="jufilter-type-slideshow btn-group"
+					label="MOD_JUTABS_ROTATE"
+					description="MOD_JUTABS_ROTATE_DESC">
+					<option
+						value="">MOD_JUTABS_PLUGIN_VALUE</option>
+					<option
+						value="true">JYES</option>
+					<option
+						value="false">JNO</option>
+				</field>
+				
+				<field type="jumessage"
+					class="box-blank"
+					description="MOD_JUTABS_SEPERATOR"
+				/>
+				
+				<field
+					name="introtext"
+					type="textarea"
+					cols="40"
+					rows="5"
+					default=""
+					filter="raw"
+					label="MOD_JUTABS_INTRO_TEXT"
+					description="MOD_JUTABS_INTRO_TEXT_DESC" />
+				
+				<field
+					name="posttext"
+					type="textarea"
+					cols="40"
+					rows="5"
+					default=""
+					filter="raw"
+					label="MOD_JUTABS_POST_TEXT"
+					description="MOD_JUTABS_POST_TEXT_DESC" />
+				
+				<field type="jumessage"
+					class="box-blank"
+					description="MOD_JUTABS_SEPERATOR"
+				/>
+				
+				<field name="showjutabscode"
+					type="radio"
+					default="1"
+					class="jufilter btn-group"
+					label="MOD_JUTABS_SHOWJUTABSCODE"
+					description="MOD_JUTABS_SHOWJUTABSCODE_DESC">
+					<option
+						value="1">JYES</option>
+					<option
+						value="0">JNO</option>
+				</field>
+				
+				<field type="jugroup"
+					name="jutabscode_group"
+					title="MOD_JUTABS_JUTABSCODE"
+					class="jufilter-showjutabscode-1"
+				/>
+				
+				<field type="jumessage"
+					description="MOD_JUTABS_JUTABSCODE_DESC"
+					class="jufilter-showjutabscode-1 juicon-info"
+				/>
+				
+				<field name="jutabscode"
+					type="jutabscode"
+					cols="50"
+					rows="10"
+					class="jufilter-showjutabscode-1 ju-fullwidth"
+				/>
+				
+			</fieldset>
+				
+			<fieldset name="advanced">
+				
+				<field name="password"
+					type="text"
+					default=""
+					label="MOD_JUTABS_PASSWORD"
+					description="MOD_JUTABS_PASSWORD_DESC" />
+					
+				<field
+					name="googlefonts"
+					type="textarea"
+					default=""
+					cols="50"
+					rows="5"
+					label="MOD_JUTABS_GOOGLE_FONTS"
+					description="MOD_JUTABS_GOOGLE_FONTS_DESC" />
+					
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+				
+			</fieldset>
+		</fields>
+	</config>
+	<updateservers>
+		<server type="collection">http://www.joomultra.com/updates/list.xml</server>
+	</updateservers>
+</extension>
