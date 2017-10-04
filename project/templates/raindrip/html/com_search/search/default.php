@@ -83,11 +83,11 @@ JHtml::_('formbehavior.chosen', 'select');
                             </div>
                             <div class="half-bottom">
                                 <h2><?php echo $article_title ?></h2>
-                                <div class="price">
+                                <!--<div class="price">
                                     $<?php echo $product_price; ?>
-                                </div>
+                                </div>-->
                             </div>
-                            <a class="green-button shopatron-add-to-cart" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $link; ?>"> ADD TO CART</a>
+                            <!--<a class="green-button shopatron-add-to-cart" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $link; ?>"> ADD TO CART</a>-->
                         </div>
 
                         <?php

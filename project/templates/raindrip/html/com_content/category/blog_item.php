@@ -41,9 +41,9 @@ if ($shopaProdID == '' || is_null($shopaProdID)) {
     </div>
     <div class="half-bottom">
         <h2><?php echo $this->item->title; ?></h2>
-        <div class="price">
+        <!--<div class="price">
             $<?php echo $product_price; ?>
-        </div>
+        </div>-->
     </div>
-    <a class="green-button shopatron-add-to-cart" data-productLink="<?php echo $link; ?>" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>
+    <!--<a class="green-button shopatron-add-to-cart" data-productLink="<?php echo $link; ?>" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>-->
 </div>

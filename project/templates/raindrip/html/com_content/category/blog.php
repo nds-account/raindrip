@@ -74,11 +74,11 @@
                     </div>
                     <div class="half-bottom">
                         <h2><?php echo $r2->title; ?></h2>
-                        <div class="price">
+                        <!--<div class="price">
                             $<?php echo number_format($product_price, 2, '.', ''); ?>
-                        </div>
+                        </div>-->
                     </div>
-                    <a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>
+                    <!--<a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>-->
                 </div>
 
                 <?php
@@ -151,11 +151,11 @@
                 </div>
                 <div class="half-bottom">
                     <h2><?php echo $r2->title; ?></h2>
-                    <div class="price">
+                    <!--<div class="price">
                         $<?php echo number_format($product_price, 2, '.', ''); ?>
-                    </div>
+                    </div>-->
                 </div>
-                <a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>
+                <!--<a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>-->
             </div>
 
         <?php
@@ -232,11 +232,11 @@
                         </div>
                         <div class="half-bottom">
                             <h2><?php echo $rSub->title; ?></h2>
-                            <div class="price">
+                            <!--<div class="price">
                                 $<?php echo number_format($product_priceSub, 2, '.', ''); ?>
-                            </div>
+                            </div>-->
                         </div>
-                        <a class="green-button shopatron-add-to-cart" data-productLink="<?php echo $linkSub; ?>" href="#" data-shopatronprodid="<?php echo $shopaProdIDSub; ?>"> ADD TO CART</a>
+                        <!--<a class="green-button shopatron-add-to-cart" data-productLink="<?php echo $linkSub; ?>" href="#" data-shopatronprodid="<?php echo $shopaProdIDSub; ?>"> ADD TO CART</a>-->
                     </div>
                 <?php
             }

@@ -161,9 +161,9 @@ JHtml::_('behavior.caption');
                                     </div>
                                     <div class="half-bottom">
                                         <h2><?php echo $rSub->title; ?></h2>
-                                        <div class="price">
+                                        <!--<div class="price">
                                             $<?php echo number_format($product_priceSub, 2, '.', ''); ?>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     <!--<a class="green-button shopatron-add-to-cart" data-productLink="<?php echo $linkSub; ?>" href="#" data-shopatronprodid="<?php echo $shopaProdIDSub; ?>"> ADD TO CART</a>-->
                                 </div>
