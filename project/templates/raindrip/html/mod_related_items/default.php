@@ -49,11 +49,11 @@
                 </div>
                 <div class="half-bottom">
                     <h2><?php echo $article_title ?></h2>
-                    <div class="price">
-                        $<?php echo $product_price; ?>
-                    </div>
+                    <!--<div class="price">
+                        $<?php //echo $product_price; ?>
+                    </div>-->
                 </div>
-                <a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>
+                <!--<a class="green-button shopatron-add-to-cart" href="#" data-productLink="<?php echo $link; ?>" data-shopatronprodid="<?php echo $shopaProdID; ?>"> ADD TO CART</a>-->
             </div>
 
         <?php endforeach; ?>
