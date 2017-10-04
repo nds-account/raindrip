@@ -196,20 +196,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <ul class="title-footer-category">
                 <li class="footer-category-title">Resources</li>
                 <li class="footer-category-link"><a href="/resources#resources-3">FAQs</a></li>
-                <li class="footer-category-link"><a href="/resources#resources-0">Catalogs</a></li>
+                <li class="footer-category-link"><a href="/resources#resources-0">Catalogues</a></li>
                 <li class="footer-category-link"><a href="/resources#resources-2">Videos</a></li>
                 <li class="footer-category-link">&nbsp;</li>
             </ul>
             <ul class="title-footer-category">
                 <li class="footer-category-title"><a href="/about-us">About Us</a></li>
                 <li class="footer-category-title"><a href="/contact-us">Contact Us</a></li>
-                <li class="footer-category-title"><a href="/rebate-center">Rebate Center</a></li>
+                <!--<li class="footer-category-title"><a href="/rebate-center">Rebate Center</a></li>-->
                 <li class="footer-category-title"><a href="/where-to-buy">Where to Buy</a></li>
             </ul>
         </div>
-        <div class="quad-width-right">
+        <!--<div class="quad-width-right">
             <a target="_blank" href="https://www.youtube.com/user/RaindripInc" class="social-circle youtube"></a> <a target="_blank"  href="http://www.pinterest.com/ndsmarketing/" class="social-circle pinterest"></a> <a target="_blank"  href="https://www.facebook.com/RaindripInc" class="social-circle facebook"></a> <a target="_blank"  href="https://plus.google.com/+Ndspro/about" class="social-circle googleplus"></a>
-        </div>
+        </div>-->
     </div>
 
     <div id="overlay">
