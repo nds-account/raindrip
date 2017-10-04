@@ -239,7 +239,7 @@ if ($imageURL == '' or is_null($imageURL)) {
 		        <?php endif; //end of addition ?>
 				
 			<!-- START: SHOW LIST PRICE -->
-			<?php if($shopaProdID=="R560DP"): ?>
+			<!--<?php if($shopaProdID=="R560DP"): ?>
 					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$90.08</h5>
 					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
 			<?php endif; ?>
@@ -250,11 +250,11 @@ if ($imageURL == '' or is_null($imageURL)) {
 			<?php if($shopaProdID=="SDFGCT"): ?>
 					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$13.23</h5>
 					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
+			<?php endif; ?>-->
 
 			<!-- START --->
 
-			<?php if($shopaProdID=="SDFSTH1P"): ?>
+			<!--<?php if($shopaProdID=="SDFSTH1P"): ?>
 					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$102.96</h5>
 					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
 			<?php endif; ?>
@@ -272,19 +272,19 @@ if ($imageURL == '' or is_null($imageURL)) {
 			<?php if($shopaProdID=="R567DT"): ?>
 					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$27.93</h5>
 					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
+			<?php endif; ?>-->
 
 			<!-- END -->
 			
-			<?php if($shopaProdID=="R560DP" || $shopaProdID=="170CPUB" || $shopaProdID=="SDFGCT" || $shopaProdID=="SDFSTH1P" || $shopaProdID=="SDGCBHP" || $shopaProdID=="R558DT" || $shopaProdID=="R567DT" ){
+			<!--<?php if($shopaProdID=="R560DP" || $shopaProdID=="170CPUB" || $shopaProdID=="SDFGCT" || $shopaProdID=="SDFSTH1P" || $shopaProdID=="SDGCBHP" || $shopaProdID=="R558DT" || $shopaProdID=="R567DT" ){
 			}else{ ?>
 				<h5>$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php } ?>
+			<?php } ?>-->
 			<!-- END: SHOW LIST PRICE -->
 			
 			
-            <input type="text" id="quantity" name="quantity" class="shptrn_quantity_selector" value="1">
-            <a class="add-to-cart shopatron-add-to-cart-quantity" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $_SERVER['PHP_SELF']; ?>" href="#"> ADD TO CART</a>
+            <!--<input type="text" id="quantity" name="quantity" class="shptrn_quantity_selector" value="1">
+            <a class="add-to-cart shopatron-add-to-cart-quantity" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $_SERVER['PHP_SELF']; ?>" href="#"> ADD TO CART</a>-->
             <!--<div id="atc_button_div_id" data-shopatronprodid="<?php echo $shopaProdID; ?>"></div>-->
 
             <div class="detail-separator clear"> </div>

@@ -107,9 +107,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <!--<img id="slogan-img" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/slogan.jpg" alt="Raindrip" />-->
             <div id="secondary-links">
 
-                <span id="position-7"><jdoc:include type="modules" name="position-7" /></span> <a href="/cart" class="cart-link"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/cart-logo.png" alt="cart" /> &nbsp;Cart (<span id="cartQQ">0</span>)</a>
+                <span id="position-7"><jdoc:include type="modules" name="position-7" /></span> <!--<a href="/cart" class="cart-link"><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/cart-logo.png" alt="cart" /> &nbsp;Cart (<span id="cartQQ">0</span>)</a>-->
             </div>
-            <div id="promo-call-out"><img src="<?php echo $this->baseurl ?>/images/shipping-promo.png" alt="Shipping Promo" /></div>
+            <!--<div id="promo-call-out"><img src="<?php echo $this->baseurl ?>/images/shipping-promo.png" alt="Shipping Promo" /></div>-->
         </div>
         <nav>
             <div id="position-9"><jdoc:include type="modules" name="position-9" /></div>
