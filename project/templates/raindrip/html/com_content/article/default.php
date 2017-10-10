@@ -156,6 +156,106 @@ if ($productStatus == 1) {
 }
 </style>
     <div class="products-container ">
+
+
+        <div class="detail-right">
+            <h4><?php echo $this->item->title; ?></h4>
+            <br/>
+            <div class="item-sku">Item Number: <?php echo $productParams->item_sku; ?></div>
+            <br/><br/>
+
+                <?php if ($this->item->title == "Set n' Flow Battery Operated Timer") : //added a link to replacement part ?>
+                  <div style="float: right; text-align: center; border: 1px solid #e9e9e9; border-radius: 5px; padding: 10px;">
+                    <a href="http://raindrip.com/order-your-replacement-timer-collar" style="text-decoration: none; color: #0697d3;">
+                        <img src="images/collar/timer-collar-v.jpg" alt="Order your replacement timer collar" width="96" height="103" /><br/>
+                        Click here to replace<br/> your broken collar for<br/> the R672CT timer
+                    </a>
+                </div>
+                <?php endif; //end of addition ?>
+                
+            <!-- START: SHOW LIST PRICE -->
+            <!--<?php if($shopaProdID=="R560DP"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$90.08</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>
+            <?php if($shopaProdID=="170CPUB"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$6.29</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>
+            <?php if($shopaProdID=="SDFGCT"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$13.23</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>-->
+
+            <!-- START --->
+
+            <!--<?php if($shopaProdID=="SDFSTH1P"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$102.96</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>
+
+            <?php if($shopaProdID=="SDGCBHP"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$135.24</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>
+
+            <?php if($shopaProdID=="R558DT"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$19.27</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>
+
+            <?php if($shopaProdID=="R567DT"): ?>
+                    <h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$27.93</h5>
+                    <h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php endif; ?>-->
+
+            <!-- END -->
+            
+            <!--<?php if($shopaProdID=="R560DP" || $shopaProdID=="170CPUB" || $shopaProdID=="SDFGCT" || $shopaProdID=="SDFSTH1P" || $shopaProdID=="SDGCBHP" || $shopaProdID=="R558DT" || $shopaProdID=="R567DT" ){
+            }else{ ?>
+                <h5>$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
+            <?php } ?>-->
+            <!-- END: SHOW LIST PRICE -->
+            
+            
+            <!--<input type="text" id="quantity" name="quantity" class="shptrn_quantity_selector" value="1">
+            <a class="add-to-cart shopatron-add-to-cart-quantity" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $_SERVER['PHP_SELF']; ?>" href="#"> ADD TO CART</a>-->
+            <!--<div id="atc_button_div_id" data-shopatronprodid="<?php echo $shopaProdID; ?>"></div>-->
+
+            <div class="detail-separator clear"> </div>
+            <div class="detail-social-share">
+
+
+                <div class="fb-like" data-href="<?php echo 'http://raindrip.com' . $_SERVER['REQUEST_URI']; ?>" data-width="48" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" data-send="true" ></div>
+
+                <a href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode('http://raindrip.com' . $_SERVER['REQUEST_URI']); ?>&amp;media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&amp;description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" alt="pinterest" /></a>
+                <!-- Please call pinit.js only once per page -->
+                <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+
+
+                <a href="<?php echo urlencode('http://raindrip.com' . $_SERVER['REQUEST_URI']); ?>" class="twitter-share-button" data-lang="en" data-size="small">Tweet</a>
+                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="detail-left detail-wp">
             <div class="clear container-image-detail">
                 <a href="#"><img id="main-image-for-product-detail" data-name="<?php echo $this->item->title; ?>" class="product-image-detailpage" src="/<?php echo $imageURL; ?>" alt="Product title" width="230" /></a><!--  width="235" -->
@@ -226,85 +326,9 @@ if ($imageURL == '' or is_null($imageURL)) {
              </div>
 
         </div>
-        <div class="detail-right">
-            <h4><?php echo $this->item->title; ?></h4>
-
-		        <?php if ($this->item->title == "Set n' Flow Battery Operated Timer") : //added a link to replacement part ?>
-			      <div style="float: right; text-align: center; border: 1px solid #e9e9e9; border-radius: 5px; padding: 10px;">
-			        <a href="http://raindrip.com/order-your-replacement-timer-collar" style="text-decoration: none; color: #0697d3;">
-				        <img src="images/collar/timer-collar-v.jpg" alt="Order your replacement timer collar" width="96" height="103" /><br/>
-				        Click here to replace<br/> your broken collar for<br/> the R672CT timer
-			        </a>
-		        </div>
-		        <?php endif; //end of addition ?>
-				
-			<!-- START: SHOW LIST PRICE -->
-			<!--<?php if($shopaProdID=="R560DP"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$90.08</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
-			<?php if($shopaProdID=="170CPUB"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$6.29</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
-			<?php if($shopaProdID=="SDFGCT"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$13.23</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>-->
-
-			<!-- START --->
-
-			<!--<?php if($shopaProdID=="SDFSTH1P"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$102.96</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
-
-			<?php if($shopaProdID=="SDGCBHP"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$135.24</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
-
-			<?php if($shopaProdID=="R558DT"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$19.27</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>
-
-			<?php if($shopaProdID=="R567DT"): ?>
-					<h5 style="text-decoration: line-through;color:#000;margin-bottom:0;padding-bottom:0;">$27.93</h5>
-					<h5 style="color:red;">$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php endif; ?>-->
-
-			<!-- END -->
-			
-			<!--<?php if($shopaProdID=="R560DP" || $shopaProdID=="170CPUB" || $shopaProdID=="SDFGCT" || $shopaProdID=="SDFSTH1P" || $shopaProdID=="SDGCBHP" || $shopaProdID=="R558DT" || $shopaProdID=="R567DT" ){
-			}else{ ?>
-				<h5>$<?php echo number_format($product_price, 2, '.', ''); ?></h5>
-			<?php } ?>-->
-			<!-- END: SHOW LIST PRICE -->
-			
-			
-            <!--<input type="text" id="quantity" name="quantity" class="shptrn_quantity_selector" value="1">
-            <a class="add-to-cart shopatron-add-to-cart-quantity" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $_SERVER['PHP_SELF']; ?>" href="#"> ADD TO CART</a>-->
-            <!--<div id="atc_button_div_id" data-shopatronprodid="<?php echo $shopaProdID; ?>"></div>-->
-
-            <div class="detail-separator clear"> </div>
-            <div class="detail-social-share">
 
 
-                <div class="fb-like" data-href="<?php echo 'http://raindrip.com' . $_SERVER['REQUEST_URI']; ?>" data-width="48" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" data-send="true" ></div>
-
-                <a href="//www.pinterest.com/pin/create/button/?url=<?php echo urlencode('http://raindrip.com' . $_SERVER['REQUEST_URI']); ?>&amp;media=http%3A%2F%2Ffarm8.staticflickr.com%2F7027%2F6851755809_df5b2051c9_z.jpg&amp;description=Next%20stop%3A%20Pinterest" data-pin-do="buttonPin" data-pin-config="beside"><img src="//assets.pinterest.com/images/pidgets/pinit_fg_en_rect_gray_20.png" alt="pinterest" /></a>
-                <!-- Please call pinit.js only once per page -->
-                <script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
-
-
-                <a href="<?php echo urlencode('http://raindrip.com' . $_SERVER['REQUEST_URI']); ?>" class="twitter-share-button" data-lang="en" data-size="small">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-
-
-            </div>
-            <p class="product-description" >
+        <p class="product-description" >
                 <?php
                 $separated_intro = explode('<div class="facts">FACTS</div>', $this->item->introtext);
 
@@ -339,6 +363,25 @@ if ($imageURL == '' or is_null($imageURL)) {
             -->
 
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="extra-data detail-wp clear">
             <ul class="tabs">
