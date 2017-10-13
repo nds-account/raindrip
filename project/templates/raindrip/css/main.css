@@ -127,3 +127,37 @@ input.gsc-search-button{
 	text-decoration: none;
 	color: #0697d3;
 }
+
+
+
+/*Changes by Aalogics*/
+
+.detail-separator{
+	display: none;
+}
+
+.detail-social-share{
+	display:none;
+}
+
+.article .detail-left{
+	display: none;
+}
+
+article .detail-left{
+	float:none;
+}
+
+article .detail-right{
+	width: 100%;
+}
+
+article .selected-thumb{
+	width: 15%;
+	height: 90px;
+	margin-right:12px;
+}
+
+.item-sku{
+	color:#000000;
+}

@@ -162,8 +162,8 @@
     }
 
 		    //added replacement link
-		    if ($this->category->id == 89) : ?>
-			    <div class="product-list-wrapper">
+		    //if ($this->category->id == 89) : ?>
+			   <!-- <div class="product-list-wrapper">
 				    <div class="half-top">
 					    <a href="http://raindrip.com/order-your-replacement-timer-collar">
 						    <img class="product-image" src="images/collar/timer-collar-v.jpg" alt="Order your replacement timer collar" width="96" height="103" />
@@ -174,8 +174,8 @@
 						    Click here to replace<br/> your broken collar for<br/> the R672CT timer
 					    </a></h2>
 				    </div>
-			    </div>
-		    <?php endif;
+			    </div> -->
+		    <?php //endif;
 		    //end of addition
 
     // SHOW CHILDREN CATEGORIES IF IT HAS PRODUCTS IN THEM
