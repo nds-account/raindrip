@@ -161,3 +161,7 @@ article .selected-thumb{
 .item-sku{
 	color:#000000;
 }
+
+article .product-list-wrapper{
+	height:245px;
+}
