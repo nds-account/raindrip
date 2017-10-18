@@ -11,7 +11,7 @@
 #position-9 .menu li{
     list-style: none;
     margin:0px;
-    padding-top:35px;
+    padding-top:35px !important;
     float: left;
     padding-right: 41px;
 

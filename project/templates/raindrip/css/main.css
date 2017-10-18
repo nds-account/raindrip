@@ -165,3 +165,7 @@ article .selected-thumb{
 article .product-list-wrapper{
 	height:245px;
 }
+
+#top-search{
+	margin-top: 10px !important;
+}
