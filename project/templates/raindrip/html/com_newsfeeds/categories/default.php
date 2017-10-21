@@ -9,7 +9,7 @@ JHtml::_('behavior.caption');
 <div class="left catalog-description" style="padding-top:2px">
 
 {jutabs defaultitem="0" openmultitabs="false" name="resources"}
-[tab title="&nbsp;&nbsp;&nbsp;&nbsp;Catalogs&nbsp;&nbsp;&nbsp;&nbsp;"]
+[tab title="&nbsp;&nbsp;&nbsp;&nbsp;Catalogues&nbsp;&nbsp;&nbsp;&nbsp;"]
 <div class="catalog-container">
 <?php
 // BEGIN LOAD CATALOG CATEGORY
@@ -91,142 +91,7 @@ $counter++;
 ?>
 </div>
 [/tab]
-[tab title="R672"]
-<div class="catalog-container">
-<?php
-// BEGIN LOAD CATALOG CATEGORY
-$db = JFactory::getDbo();
-$id = 98; // replace for CATALOG categories in RESOURCES
-$mod = "R672"; // replace for MODEL name in #__newsfeeds->vidtitle
-$query = $db->getQuery(true);
-$query->select('*');
-$query->from('#__newsfeeds');
-$query->where('catid="' . $id . '" AND vidtitle="' . $mod . '" AND published=1');
-$db->setQuery((string) $query);
-$res = $db->loadObjectList();
-$procuctsCount = count($res);
-if ($procuctsCount > 0){
-$counter = 0;
-foreach ($res as $r){
-if ($counter % 2 == 1){$extraClass = ' mleft36 ';}else{$extraClass = ' ';}
-$JSONimages = json_decode($r->images);
-$imageURL = $JSONimages->image_first;
-if ($imageURL == '' or is_null($imageURL)){$imageURL = 'images/empty-raindrip.jpg';}
-// GET CATALOG FILE
-$fileURL = $JSONimages->image_second;
-if ($fileURL == '' or is_null($fileURL)){
-$downloadLink = '<span class="not-available"> NOT AVAILABLE </span>';
-}else{
-$downloadLink = '<a target="_blank" href="/' . $fileURL . '" class="download"> DOWNLOAD </a>';}
-echo '<div class="catalog-inner ' . $extraClass . '">
-<div class="left"><img src="/' . $imageURL . '" alt="Raindrip" /></div>
-<div class="left left18">
-<div class="title">' . $r->name . '</div>
-' . $downloadLink . '
-</div>
-</div>';
-$counter++;
-}
-}
 
-//added replacement link ?>
-	<div class="catalog-inner">
-		<div class="left">
-			<a href="http://raindrip.com/order-your-replacement-timer-collar">
-				<img src="images/collar/timer-collar-v.jpg" alt="Order your replacement timer collar" width="96" height="103" style="padding: 0 13px;"/>
-			</a>
-		</div>
-		<div class="left left18">
-			<div class="title"><a href="http://raindrip.com/order-your-replacement-timer-collar" style="text-decoration: none; color: #0697d3;">
-					Click here to replace<br/> your broken collar for<br/> the R672CT timer
-				</a></div>
-		</div>
-	</div>
-<?php //end of addition
-
-?>
-</div>
-[/tab]
-[tab title="R673"]
-<div class="catalog-container">
-<?php
-// BEGIN LOAD CATALOG CATEGORY
-$db = JFactory::getDbo();
-$id = 98; // replace for CATALOG categories in RESOURCES
-$mod = "R673"; // replace for MODEL name in #__newsfeeds->vidtitle
-$query = $db->getQuery(true);
-$query->select('*');
-$query->from('#__newsfeeds');
-$query->where('catid="' . $id . '" AND vidtitle="' . $mod . '" AND published=1');
-$db->setQuery((string) $query);
-$res = $db->loadObjectList();
-$procuctsCount = count($res);
-if ($procuctsCount > 0){
-$counter = 0;
-foreach ($res as $r){
-if ($counter % 2 == 1){$extraClass = ' mleft36 ';}else{$extraClass = ' ';}
-$JSONimages = json_decode($r->images);
-$imageURL = $JSONimages->image_first;
-if ($imageURL == '' or is_null($imageURL)){$imageURL = 'images/empty-raindrip.jpg';}
-// GET CATALOG FILE
-$fileURL = $JSONimages->image_second;
-if ($fileURL == '' or is_null($fileURL)){
-$downloadLink = '<span class="not-available"> NOT AVAILABLE </span>';
-}else{
-$downloadLink = '<a target="_blank" href="/' . $fileURL . '" class="download"> DOWNLOAD </a>';}
-echo '<div class="catalog-inner ' . $extraClass . '">
-<div class="left"><img src="/' . $imageURL . '" alt="Raindrip" /></div>
-<div class="left left18">
-<div class="title">' . $r->name . '</div>
-' . $downloadLink . '
-</div>
-</div>';
-$counter++;
-}
-}
-?>
-</div>
-[/tab]
-[tab title="R682"]
-<div class="catalog-container">
-<?php
-// BEGIN LOAD CATALOG CATEGORY
-$db = JFactory::getDbo();
-$id = 98; // replace for CATALOG categories in RESOURCES
-$mod = "R682"; // replace for MODEL name in #__newsfeeds->vidtitle
-$query = $db->getQuery(true);
-$query->select('*');
-$query->from('#__newsfeeds');
-$query->where('catid="' . $id . '" AND vidtitle="' . $mod . '" AND published=1');
-$db->setQuery((string) $query);
-$res = $db->loadObjectList();
-$procuctsCount = count($res);
-if ($procuctsCount > 0){
-$counter = 0;
-foreach ($res as $r){
-if ($counter % 2 == 1){$extraClass = ' mleft36 ';}else{$extraClass = ' ';}
-$JSONimages = json_decode($r->images);
-$imageURL = $JSONimages->image_first;
-if ($imageURL == '' or is_null($imageURL)){$imageURL = 'images/empty-raindrip.jpg';}
-// GET CATALOG FILE
-$fileURL = $JSONimages->image_second;
-if ($fileURL == '' or is_null($fileURL)){
-$downloadLink = '<span class="not-available"> NOT AVAILABLE </span>';
-}else{
-$downloadLink = '<a target="_blank" href="/' . $fileURL . '" class="download"> DOWNLOAD </a>';}
-echo '<div class="catalog-inner ' . $extraClass . '">
-<div class="left"><img src="/' . $imageURL . '" alt="Raindrip" /></div>
-<div class="left left18">
-<div class="title">' . $r->name . '</div>
-' . $downloadLink . '
-</div>
-</div>';
-$counter++;
-}
-}
-?>
-</div>
-[/tab]
 {/jutabs}
 </div>
 [/tab]
@@ -355,7 +220,7 @@ $counter++;
 {jutabs defaultitem="0" tabscroll="false"}
 [tab title="Kits"]
 {jutabs defaultitem="0" widthtabs="200px" position="left"}
-[tab title="Container &amp; Hanging Baskets"]
+[tab title="Pot &amp; Hanging Baskets"]
 {jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=214 ORDER BY ordering" type="accordion"}
 {/jutabs}
 [/tab]
