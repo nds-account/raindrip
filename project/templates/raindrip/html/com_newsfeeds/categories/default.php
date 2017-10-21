@@ -51,7 +51,7 @@ $counter++;
 [tab title="&nbsp;&nbsp;&nbsp;&nbsp;Timers&nbsp;&nbsp;&nbsp;&nbsp;"]
 <div class="catalog-container">
 {jutabs defaultitem="0" widthtabs="90px" position="left" openmultitabs="false"}
-[tab title="R675CT"]
+[tab title="RDTT20"]
 <div class="catalog-container">
 <?php
 // BEGIN LOAD CATALOG CATEGORY
@@ -289,40 +289,8 @@ $counter++;
         }
         ?>
 [/tab]
-  [tab title="NEW Drought Buster Watering Kits"]
-       <?php
-        //BEGIN LOAD VIDEOS  CATEGORY
-        $db = JFactory::getDbo();
-        $id = 99; // replace for VIDEOS categories in RESOURCES
-        $ytc = 0; // replace for YOUTUBECHANNEL in DB
-        $query = $db->getQuery(true);
-        $query->select('*');
-        $query->from('#__newsfeeds');
-         $query->where('catid="' . $id . '" AND published=1 AND youtubechannel="' . $ytc . '" ORDER BY ordering');
-        $db->setQuery((string) $query);
-        $res = $db->loadObjectList();
-        $procuctsCount = count($res);
-
-        if ($procuctsCount > 0) {
-			
-            foreach ($res as $r) {            
-              	$JSONimages = json_decode($r->images);
-				$imageURL = $JSONimages->image_first;
-              echo '<div class="video-container">
-                    <div class="inner-container">
-					<div class="vidtitle">'. strip_tags($r->name) .'</div>
-					{modal '. $r->link .'?autoplay=1|width=560|height=315}
-                    <img src="'. $imageURL .'" alt="" style="width: 238px;height: 144px;">
-                   {/modal}
-                        <!--iframe width="238" height="144" src="' . $r->link . '"  allowfullscreen></iframe-->
-                        <div class="title">' . strip_tags($r->description) . '</div>
-                    </div>
-                </div>';
-            }
-        }
-        ?>
-[/tab]
-[tab title="Programming Raindrip Timers"]
+ 
+[tab title="Programming Raindrip Timer"]
        <?php
         //BEGIN LOAD VIDEOS  CATEGORY
         $db = JFactory::getDbo();

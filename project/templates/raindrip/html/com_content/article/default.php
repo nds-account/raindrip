@@ -151,8 +151,8 @@ if ($productStatus == 1) {
     padding: 0;
 }
 .thumb-container.selected-thumb img {
-    width: 100%;
-    max-height: 45px;
+    width: 90%;
+    max-height: 90%;
 }
 </style>
     <div class="products-container ">
