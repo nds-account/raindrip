@@ -172,3 +172,10 @@ article .product-list-wrapper{
 article .selected-thumb{
 	margin-bottom:12px;
 }
+
+.thumb-container:first-child {
+    display: none;
+}
+.similar-products-wrapper {
+	display:none;
+}
