@@ -144,7 +144,7 @@ $counter++;
             foreach ($res as $r) {
                 echo '<div class="video-container">
                     <div class="inner-container">
-					<div class="vidtitle">'. strip_tags($r->vidtitle) .'</div>
+					<div class="vidtitle">'. strip_tags($r->name) .'</div>
 					{modal '. $r->link .'?autoplay=1|width=560|height=315}'. $r->image .'{/modal}
                         <!--iframe width="238" height="144" src="' . $r->link . '"  allowfullscreen></iframe-->
                         <div class="title">' . strip_tags($r->description) . '</div>
@@ -174,7 +174,7 @@ $counter++;
             foreach ($res as $r) {
                 echo '<div class="video-container">
                     <div class="inner-container">
-					<div class="vidtitle">'. strip_tags($r->vidtitle) .'</div>
+				<div class="vidtitle">'. strip_tags($r->name) .'</div>
 					{modal '. $r->link .'?autoplay=1|width=560|height=315}'. $r->image .'{/modal}
                         <!--iframe width="238" height="144" src="' . $r->link . '"  allowfullscreen></iframe-->
                         <div class="title">' . strip_tags($r->description) . '</div>
