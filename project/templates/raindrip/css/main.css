@@ -169,3 +169,6 @@ article .product-list-wrapper{
 #top-search{
 	margin-top: 10px !important;
 }
+article .selected-thumb{
+	margin-bottom:12px;
+}
