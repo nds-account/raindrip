@@ -172,10 +172,13 @@ article .product-list-wrapper{
 article .selected-thumb{
 	margin-bottom:12px;
 }
-
 .thumb-container:first-child {
     display: none;
 }
 .similar-products-wrapper {
 	display:none;
+}
+
+.in-the-kit-outer .inthekit-wrapper {
+	height:430px;
 }
