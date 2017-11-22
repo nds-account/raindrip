@@ -179,3 +179,8 @@ article .selected-thumb{
 .similar-products-wrapper {
 	display:none;
 }
+.footer-nds{
+    font-size: 13px;
+    font-weight: bold;
+    color: #4f812d;
+}    

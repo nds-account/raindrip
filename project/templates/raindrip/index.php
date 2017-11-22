@@ -165,6 +165,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <div class="quad-width">
             <a href="/"><img id="footer-logo" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/logo-footer.png" alt="raindrip" /></a>
             <div class="copyright">Copyright 2017</div>
+            <br><div class="footer-nds">Raindrip is a corporation/<br>subsidiary of NDS</div>
+        </div>
         </div>
         <div class="quad-width">
             <ul class="title-footer-category">
