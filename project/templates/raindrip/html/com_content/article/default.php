@@ -385,17 +385,17 @@ if ($imageURL == '' or is_null($imageURL)) {
 
         <div class="extra-data detail-wp clear">
             <ul class="tabs">
-                <li class="single-tab selected-tab"><a href="#" class="show-tab" data-id="main-description" >Product Specs</a></li>
-                <li class="single-tab"><a href="#" class="show-tab" data-id="main-videos">Videos</a></li>
+<!--                 <li class="single-tab selected-tab"><a href="#" class="show-tab" data-id="main-description" >Product Specs</a></li>
+ -->                <li class="single-tab"><a href="#" class="show-tab" data-id="main-videos">Videos</a></li>
             </ul>
-            <div class="specs-body" id="main-description">
+            <!-- <div class="specs-body" id="main-description">
                 <span class="spec-title">Product Dimensions:</span> <?php echo $itemL; ?> <?php echo $measureDimensions; ?> L x <?php echo $itemW; ?> <?php echo $measureDimensions; ?> W x <?php echo $itemH; ?> <?php echo $measureDimensions; ?> H<br/>
                 <span class="spec-title">Shipping Weight:</span> <?php echo $productWeight; ?> <?php echo $measureWeight; ?><br/>
                 <span class="spec-title">Item Number:</span> <?php echo $productParams->item_sku; ?><br/>
                 <span class="spec-title">Warranty:</span> <?php echo $warrantyText; ?><br/>
-            </div>
+            </div> -->
 
-            <div class="specs-body clear" id="main-videos" style="display:none">
+            <div class="specs-body clear" id="main-videos">
                 <div class="video-container clear">
                     <div class="clear">
                         <?php if ($videoUrlYoutube != '' && !is_null($videoUrlYoutube)) { ?>
