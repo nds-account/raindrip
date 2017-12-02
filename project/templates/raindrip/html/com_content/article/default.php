@@ -416,7 +416,7 @@ if ($imageURL == '' or is_null($imageURL)) {
 
 
         </div>
-        <p class="products-extra-info"><br/><b>If you need more information visit our <a href="/resources">Resources</a> tab to view our <a href="/resources/faq">FAQs</a>, <a href="resources#resources-0">Catalogues</a> or <a href="/resources/videos">Installation Videos</a>.</b></p>
+        <p class="products-extra-info"><br/><b>If you need more information visit our <a href="/resources">Resources</a> tab to view our <a href="/resources/faq">FAQs</a>, <a href="/resources#resources-0">Catalogues</a> or <a href="/resources/videos">Installation Videos</a>.</b></p>
         <div class="big-separator"></div>
 
     </div>
