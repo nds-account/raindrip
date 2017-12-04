@@ -188,11 +188,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         </div>
         <div class="quad-width">
-            <ul class="title-footer-category">
+            <!-- <ul class="title-footer-category">
                 <li class="footer-category-title">Expand & Repair</li>
                 <li class="footer-category-link"><a href="/expand-and-repair">How much material will I need?</a></li>
-            </ul>
-            <br/>
+            </ul> 
+            <br/> -->
             <ul class="title-footer-category">
                 <li class="footer-category-title">Resources</li>
                 <li class="footer-category-link"><a href="/resources#resources-3">FAQs</a></li>
