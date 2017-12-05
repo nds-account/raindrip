@@ -256,7 +256,7 @@ $counter++;
 [/tab]
 [tab title="Timers"]
 {jutabs defaultitem="0" widthtabs="200px" position="left"}
-
+  
 [tab title="RDTT20"]
 {jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=220 ORDER BY ordering" type="accordion"}
 {/jutabs}
