@@ -255,14 +255,37 @@ $counter++;
 {/jutabs}
 [/tab]
 [tab title="Timers"]
-{jutabs defaultitem="0" widthtabs="200px" position="left"}
-  
+{jutabs defaultitem="0" widthtabs="200px" position="left"}  
 [tab title="RDTT20"]
 {jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=220 ORDER BY ordering" type="accordion"}
 {/jutabs}
 [/tab]
 {/jutabs}
 [/tab]
+
+
+[tab title="sprinkler"]
+{jutabs defaultitem="0" widthtabs="200px" position="left"}
+
+[tab title="I want to repair my sprinkler"]
+{jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=223 ORDER BY ordering" type="accordion"}
+{/jutabs}
+[/tab]
+{/jutabs}
+[/tab]
+
+[tab title="Kits Tips"]
+{jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=224 ORDER BY ordering" type="accordion"}
+{/jutabs}
+[/tab]
+
+[tab title="Anatomy of a Drip System"]
+{jutabs loadcontent="sql:SELECT title, introtext AS content FROM #__content WHERE catid=225 ORDER BY ordering" type="accordion"}
+{/jutabs}
+[/tab]
+
+
+
 {/jutabs}
 </div>
 [/tab]
