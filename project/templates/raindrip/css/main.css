@@ -185,7 +185,10 @@ footer, header {
 	width: 100%;
 	min-width: 100%;
 }
-footer #center-footer, #main-top, nav, section, .full-width, .w1000, .catalog-container, .kits-page-container {
+.full-width.zero-padding {
+	width: 1041px;
+}
+footer #center-footer, #main-top, nav, section, .w1000, .catalog-container, .kits-page-container {
 	width: 960px;
 }
 .item-page-full {
