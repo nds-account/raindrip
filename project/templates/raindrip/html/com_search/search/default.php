@@ -33,7 +33,7 @@ JHtml::_('formbehavior.chosen', 'select');
                     $idCategory = $params2[0];
                 }
 
-                if (is_numeric($idProduct) && $idProduct != 87 && $idProduct != 74 && $idProduct != 75 && $idProduct != 94 && $idProduct != 93 && $idProduct <212) { // EXCLUDE STSTIC PAGES
+                if (is_numeric($idProduct) && $idProduct != 87 && $idProduct != 74 && $idProduct != 75 && $idProduct != 94 && $idProduct != 93 /*&& $idProduct <212*/) { // EXCLUDE STSTIC PAGES
                     $imageURL = '';
                     $article = & JTable::getInstance("content");
                     $article->load($idProduct);
