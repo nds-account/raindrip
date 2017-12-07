@@ -185,12 +185,15 @@ footer, header {
 	width: 100%;
 	min-width: 100%;
 }
-.full-width.zero-padding {
-	width: 1041px;
-}
-footer #center-footer, #main-top, nav, section, .w1000, .catalog-container, .kits-page-container {
+footer #center-footer, #main-top, nav, section, .full-width, .w1000, .kits-page-container {
 	width: 960px;
 }
 .item-page-full {
 	width: 960px !important;
+}
+.style06-tab.ju-tabs-wrap .ju-tabs-panel-left {
+	width: 780px !important;
+}
+.catalog-container {
+	width: 100%;
 }
