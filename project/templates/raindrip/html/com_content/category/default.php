@@ -94,7 +94,9 @@ JHtml::_('behavior.caption');
                                 </a>
                             </div>
                             <div class="half-bottom">
-                                <h2><?php echo $r2->title; ?></h2>
+                                <a href="<?php echo $link; ?>"  title="<?php echo htmlentities($r2->title); ?>">
+                                    <h2><?php echo $r2->title; ?></h2>
+                                </a>    
                                 <!--<div class="price">
                                     $<?php echo number_format($product_price, 2, '.', ''); ?>
                                 </div>-->
@@ -160,7 +162,9 @@ JHtml::_('behavior.caption');
                                         </a>
                                     </div>
                                     <div class="half-bottom">
-                                        <h2><?php echo $rSub->title; ?></h2>
+                                        <a href="<?php echo $linkSub; ?>"  title="<?php echo htmlentities($rSub->title); ?>">
+                                            <h2><?php echo $rSub->title; ?></h2>
+                                        </a>    
                                         <!--<div class="price">
                                             $<?php echo number_format($product_priceSub, 2, '.', ''); ?>
                                         </div>-->
