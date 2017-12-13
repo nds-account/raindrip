@@ -40,7 +40,9 @@ if ($shopaProdID == '' || is_null($shopaProdID)) {
         </a>
     </div>
     <div class="half-bottom">
-        <h2><?php echo $this->item->title; ?></h2>
+        <a href="<?php echo $link; ?>"  title="<?php echo htmlentities($this->item->title); ?>">
+            <h2><?php echo $this->item->title; ?></h2>
+        </a>    
         <!--<div class="price">
             $<?php echo $product_price; ?>
         </div>-->

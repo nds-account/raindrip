@@ -48,7 +48,9 @@
                     </a>
                 </div>
                 <div class="half-bottom">
-                    <h2><?php echo $article_title ?></h2>
+                    <a href="<?php echo $link; ?>"  title="<?php echo htmlentities($article_title); ?>">
+                        <h2><?php echo $article_title ?></h2>
+                    </a>    
                     <!--<div class="price">
                         $<?php //echo $product_price; ?>
                     </div>-->
