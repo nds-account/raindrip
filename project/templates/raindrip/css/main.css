@@ -180,3 +180,6 @@ article .selected-thumb{
 .similar-products-wrapper {
 	display:none;
 }
+.half-bottom a{
+	text-decoration: none;
+}
