@@ -41,63 +41,71 @@ JHtml::_('formbehavior.chosen', 'select');
                         $imageURL = '';
                         $article = & JTable::getInstance("content");
                         $article->load($idProduct);
-                        $article_title = $productName;
-                        $article_images = $article->get("attribs");
-                        $article_slug = $productSlug;
-                        $JSONimages = json_decode($article->get("images"));
 
-                        if (isset($JSONimages->image_intro)) {
-                            $imageURL = $JSONimages->image_intro;
-                        }
+                        $article_data = json_decode($article->attribs);
+                        //exclude FAQ pages from search results
+                        if( $article_data->item_sku != "" ){
+                            
+                            $article_title = $productName;
+                            $article_images = $article->get("attribs");
+                            $article_slug = $productSlug;
+                            $JSONimages = json_decode($article->get("images"));
 
-                        if ($imageURL == '' || is_null($imageURL)) {
-                            $imageURL = 'images/empty-raindrip.jpg';
-                        }
-                        $productParams = json_decode($article->get("attribs"));
-
-                        if (isset($productParams->item_cart_text)) {
-
-                            $hasItmes = 1;
-
-                            // CHECK IF ITEM HAS SPECIAL PRICE
-                            if (isset($productParams->special_price)) {
-                                $product_price =  number_format($productParams->special_price, 2, '.', '');
+                            if (isset($JSONimages->image_intro)) {
+                                $imageURL = $JSONimages->image_intro;
                             }
 
-                            if ($product_price == '' || is_null($product_price) || $product_price == 0) {
-                                 //$product_price = round($productParams->item_price, 2);
-                                 $product_price =  number_format($productParams->item_price, 2, '.', '');
+                            if ($imageURL == '' || is_null($imageURL)) {
+                                $imageURL = 'images/empty-raindrip.jpg';
                             }
+                            $productParams = json_decode($article->get("attribs"));
+
+                            if (isset($productParams->item_cart_text)) {
+
+                                $hasItmes = 1;
+
+                                // CHECK IF ITEM HAS SPECIAL PRICE
+                                if (isset($productParams->special_price)) {
+                                    $product_price =  number_format($productParams->special_price, 2, '.', '');
+                                }
+
+                                if ($product_price == '' || is_null($product_price) || $product_price == 0) {
+                                     //$product_price = round($productParams->item_price, 2);
+                                     $product_price =  number_format($productParams->item_price, 2, '.', '');
+                                }
 
 
-                            $shopaProdID = $productParams->item_cart_text;
-                            if ($shopaProdID == '' || is_null($shopaProdID)) {
-                                $shopaProdID = 0;
-                            }
+                                $shopaProdID = $productParams->item_cart_text;
+                                if ($shopaProdID == '' || is_null($shopaProdID)) {
+                                    $shopaProdID = 0;
+                                }
 
-                            //$link = '';
-                            $link = JRoute::_(ContentHelperRoute::getArticleRoute($idProduct, $idCategory));
-                            ?>
+                                //$link = '';
+                                $link = JRoute::_(ContentHelperRoute::getArticleRoute($idProduct, $idCategory));
+                                ?>
 
-                            <div class="product-list-wrapper">
-                                <div class="half-top">
-                                    <a href="<?php echo $link; ?>"  title="<?php echo $article_title; ?>">
-                                        <img class="product-image" src="/<?php echo $imageURL; ?>" alt="Product title" width="160" />
-                                    </a>
+                                <div class="product-list-wrapper">
+                                    <div class="half-top">
+                                        <a href="<?php echo $link; ?>"  title="<?php echo $article_title; ?>">
+                                            <img class="product-image" src="/<?php echo $imageURL; ?>" alt="Product title" width="160" />
+                                        </a>
+                                    </div>
+                                    <div class="half-bottom">
+                                        <a href="<?php echo $link; ?>"  title="<?php echo $article_title; ?>">
+                                            <h2><?php echo $article_title ?></h2>
+                                        </a>    
+                                        <!--<div class="price">
+                                            $<?php echo $product_price; ?>
+                                        </div>-->
+                                    </div>
+                                    <!--<a class="green-button shopatron-add-to-cart" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $link; ?>"> ADD TO CART</a>-->
                                 </div>
-                                <div class="half-bottom">
-                                    <a href="<?php echo $link; ?>"  title="<?php echo $article_title; ?>">
-                                        <h2><?php echo $article_title ?></h2>
-                                    </a>    
-                                    <!--<div class="price">
-                                        $<?php echo $product_price; ?>
-                                    </div>-->
-                                </div>
-                                <!--<a class="green-button shopatron-add-to-cart" href="#" data-shopatronprodid="<?php echo $shopaProdID; ?>" data-productLink="<?php echo $link; ?>"> ADD TO CART</a>-->
-                            </div>
 
-                            <?php
+                                <?php
+                            }
+
                         }
+
                     }
                 }
             }
