@@ -35,7 +35,7 @@ JHtml::_('formbehavior.chosen', 'select');
 
 
                 //exclude static pages and categories from search results
-                if($product->section != "Static Pages" && $product->section != "Uncategorised" && $product->section != "Category"){
+                if($product->section != "Static Pages" && $product->section != "Uncategorised" && $product->section != "Category" && !preg_match('/Newsfeeds/',$product->section) ){
 
                     if (is_numeric($idProduct) && $idProduct != 87 && $idProduct != 74 && $idProduct != 75 && $idProduct != 94 && $idProduct != 93 /*&& $idProduct <212*/) { // EXCLUDE STSTIC PAGES
                         $imageURL = '';
