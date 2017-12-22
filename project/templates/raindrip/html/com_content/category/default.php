@@ -33,7 +33,7 @@ JHtml::_('behavior.caption');
             $query2 = $db->getQuery(true);
             $query2->select('*');
             $query2->from('#__content');
-            $query2->where('catid="' . $id2 . '" AND state="1" order by title ASC');
+            $query2->where('catid="' . $id2 . '" AND state="1" order by ordering ASC');
 
             $db2->setQuery((string) $query2);
             $res2 = $db2->loadObjectList();
