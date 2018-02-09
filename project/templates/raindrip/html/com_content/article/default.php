@@ -270,6 +270,13 @@ if ($productStatus == 1) {
                     <a class="fancybox-no" href="#" ><img class="product-image-detail" alt="" title="" src="/<?php echo $imageURL; ?>" ></a>
                 </div>
 
+                <!-- Add Main image into secondary images-->
+                <div class="thumb-container selected-thumb">
+                    <a  class="fancybox-no"  href="#" >
+                        <img class="product-image-detail" height="230" src="/<?php echo $imageURL;?>" title="" alt="">  
+                    </a>
+                </div>
+
                 <?php
                 foreach ($imageArray[0] as $image) {
                     $showImage = str_replace('img', 'img class="product-image-detail"  height="230" ', $image);
