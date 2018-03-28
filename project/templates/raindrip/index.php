@@ -22,6 +22,7 @@ if (JRequest::getVar('option') == 'com_content' && JRequest::getVar('view') == '
             }
         }
         ?>
+    <meta name="google-site-verification" content="Qa2lDxG7MMZp8rwYLoSY0CYAPfC3H1Bs55e9qC1LuBQ" />            
     <jdoc:include type="head" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/main.css" type="text/css" />
 	  <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/expand.css" type="text/css" />
@@ -54,15 +55,14 @@ href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/
     <!--END - SHOPATRON SCRIPTS -->
 <script type="text/javascript" src="//use.typekit.net/xrg0yif.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115158992-1"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  ga('create', 'UA-16321891-2', 'auto');
-  ga('send', 'pageview');
-
+gtag('config', 'UA-115158992-1');
 </script>
     <!-- Begin Inspectlet Embed Code -->
 <script type="text/javascript" id="inspectletjs">
