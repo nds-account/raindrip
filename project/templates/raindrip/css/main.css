@@ -201,3 +201,8 @@ footer #center-footer, #main-top, nav, section, .full-width, .w1000, .kits-page-
 .half-bottom a{
 	text-decoration: none;
 }
+
+/*Hide feedback chat from site*/
+.ki-ml{
+	display: none;
+}
